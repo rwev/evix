@@ -16,3 +16,6 @@ set hlsearch
 
 set foldenable  
 
+set splitbelow
+set splitright
+
