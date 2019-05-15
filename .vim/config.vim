@@ -1,4 +1,4 @@
-colorscheme badwolf
+colorscheme nord
 
 filetype plugin indent on
 syntax enable
@@ -44,14 +44,14 @@ set exrc
 set noswapfile
 set backup backupdir=~/.vim/backup
 if !isdirectory(expand(&backupdir))
-	call mkdir(expand(&backupdir), 'p')
+        call mkdir(expand(&backupdir), 'p')
 endif
 
-set undofile                  
-set undolevels=1000          
-set undodir=~/.vim/undo      
+set undofile
+set undolevels=1000
+set undodir=~/.vim/undo
 if !isdirectory(expand(&undodir))
-	call mkdir(expand(&undodir), 'p')
+        call mkdir(expand(&undodir), 'p')
 endif
 
 set spelllang=en_us
@@ -72,7 +72,7 @@ set colorcolumn=+1
 set showtabline=2
 
 set mousehide
-set mouse=a                
+set mouse=a
 
 set foldopen=hor,insert,jump,mark,percent,quickfix,search,tag,undo
 set foldenable
