@@ -18,10 +18,13 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py'  }
 
 " Interface
 Plug 'mhinz/vim-startify'
-Plug 'itchyny/lightline.vim'
-let g:lightline = { 'colorscheme': 'nord' }
-Plug 'nathanaelkane/vim-indent-guides'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'arcticicestudio/nord-vim'
+let g:airline_theme='nord'
+let g:airline_powerline_fonts=1
 
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
 
