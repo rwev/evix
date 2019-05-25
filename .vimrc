@@ -1,7 +1,4 @@
-set nocp
-
 let g:vim_home = get(g:, 'vim_home', expand('~/.vim/'))
-
 let config_list = [
                         \ 'config.vim',
                         \ 'plugins.vim',
@@ -12,5 +9,3 @@ for files in config_list
                 exec 'source' f
         endfor
 endfor
-
-set secure
