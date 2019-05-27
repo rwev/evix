@@ -1,2 +1,4 @@
-source "$HOME/.zsh/min.zsh"
-source "$HOME/.zsh/oh-my.zsh"
+export ZSH="/home/rwev/.oh-my-zsh"
+ZSH_THEME="spaceship"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
