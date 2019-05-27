@@ -24,7 +24,7 @@ Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
-let g:airline_theme='nord' " TODO configure status bar (?)
+let g:airline_theme='nord'
 let g:airline_powerline_fonts=1
 
 Plug 'nathanaelkane/vim-indent-guides'
@@ -44,7 +44,7 @@ let NERDTreeIgnore=['\.pyc$', '\~$']
 
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'mbbill/undotree'
-nnoremap <F5> :UndotreeToggle<cr>
+nnoremap <F2> :UndotreeToggle<cr>
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
@@ -54,12 +54,23 @@ endif
 nnoremap <C-P> :Files<CR>
 
 " Code running
-" TODO install async runner plugin and write run functions
+Plug 'skywind3000/asyncrun.vim'
+nnoremap <F5> :call <SID>run()<CR>
+function! s:run()
+        exec 'w'
+        if &filetype == 'sh'
+                exec "AsyncRun! time bash %"
+        elseif &filetype == 'python'
+                exec "AsyncRun!
+                time python %"
+        endif
+endfunction
+
 
 " Editing
 Plug 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR>
-au BufWrite * :Autoformat " TODO install default formatters
+au BufWrite * :Autoformat
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'

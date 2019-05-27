@@ -11,10 +11,12 @@ sudo apt-get install \
         tmux \
         zsh \
         htop \
-        newsbeuter \
+        newsbeuter
 
+# formatters
+sudo python3.6 -m pip install black
 
-        # zsh
+# zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
