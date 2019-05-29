@@ -49,7 +49,7 @@ nnoremap <F2> :UndotreeToggle<cr>
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 if (executable('ag'))
-        let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g '
+        let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 endif
 nnoremap <C-P> :Files<CR>
 
@@ -72,6 +72,7 @@ Plug 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR>
 au BufWrite * :Autoformat
 
+Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-abolish'
