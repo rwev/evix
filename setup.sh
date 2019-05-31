@@ -11,10 +11,14 @@ sudo apt-get install \
         tmux \
         zsh \
         htop \
-        newsbeuter
+        newsbeuter \
+        mutt \
+        exuberant-ctags \
+        taskwarrior \
 
-# formatters
+        # formatters
 sudo python3.6 -m pip install black
+sudo npm install -g remark-cli js-beautify
 
 # zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

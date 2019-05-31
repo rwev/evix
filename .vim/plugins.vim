@@ -25,9 +25,9 @@ let g:airline_powerline_fonts=1
 Plug 'nathanaelkane/vim-indent-guides'
 
 Plug 'scrooloose/nerdtree'
-let NERDTreeShowHidden=1
+let g:NERDTreeShowHidden=1
 let g:NERDTreeQuitOnOpen=1
-let NERDTreeIgnore=['\.pyc$', '\~$']
+let g:NERDTreeIgnore=['\.pyc$', '\~$']
 nnoremap <F7> :NERDTreeToggle<CR>
 
 Plug 'majutsushi/tagbar'
@@ -47,9 +47,9 @@ Plug 'junegunn/fzf.vim'
 if (executable('ag'))
         let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 endif
-nnoremap <C-M> :Files<CR>
+nnoremap <C-P> :Files<CR>
+nnoremap <C-M> :Tags<CR>
 nnoremap <C-N> :Ag<CR>
-nnoremap <C-B> :Tags<CR>
 
 " Code running
 Plug 'skywind3000/asyncrun.vim'
@@ -58,8 +58,8 @@ function! s:run()
         exec 'w'
         if &filetype == 'sh'
                 exec "AsyncRun! time bash %"
-        elseif &filetype == 'python'
-                exec "AsyncRun!
+        elseif &filetype == 'python'
+                exec "AsyncRun!
                 time python %"
         endif
 endfunction
