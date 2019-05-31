@@ -11,12 +11,9 @@ sudo apt-get install \
         tmux \
         zsh \
         htop \
-        newsbeuter \
-        mutt \
-        exuberant-ctags \
-        taskwarrior \
+        newsbeuter
 
-        # formatters
+# formatters
 sudo python3.6 -m pip install black
 sudo npm install -g remark-cli js-beautify
 
