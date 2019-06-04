@@ -111,3 +111,22 @@ time 1559320491
 old [description:"use custom bash prompt" entry:"1559320475" modified:"1559320475" project:"code" status:"pending" tags:"bash" uuid:"23328269-b1ab-4c5b-ae68-e45cd92fdba3"]
 new [description:"use custom bash prompt" entry:"1559320475" modified:"1559320491" project:"code" status:"pending" tags:"bash,evix" uuid:"23328269-b1ab-4c5b-ae68-e45cd92fdba3"]
 ---
+time 1559620856
+new [description:"figure out how vim <leader> works" entry:"1559620856" modified:"1559620856" project:"code" status:"pending" tags:"evix,vim" uuid:"a40617e5-a4a7-4818-9090-7a872eef6822"]
+---
+time 1559620912
+old [description:"source muttrc.private" entry:"1559308700" modified:"1559308700" project:"code" status:"pending" tags:"evix" uuid:"8c7d5338-f84f-415c-b908-fc08aaa43cc4"]
+new [description:"source muttrc.private" end:"1559620912" entry:"1559308700" modified:"1559620912" project:"code" status:"completed" tags:"evix" uuid:"8c7d5338-f84f-415c-b908-fc08aaa43cc4"]
+---
+time 1559620956
+old [description:"integrate bookmarked dotfiles to own" entry:"1559309686" modified:"1559311165" project:"code" status:"pending" tags:"evix,bash" uuid:"a384493f-5743-49b7-b794-ec6efd9de6ea"]
+new [description:"integrate bookmarked dotfiles to own" end:"1559620956" entry:"1559309686" modified:"1559620956" project:"code" status:"completed" tags:"evix,bash" uuid:"a384493f-5743-49b7-b794-ec6efd9de6ea"]
+---
+time 1559620956
+old [description:"look at vim-awesome recommendations" entry:"1559309706" modified:"1559309706" project:"code" status:"pending" tags:"evix" uuid:"860c8cc7-c9c5-4fec-923f-352d2baef28d"]
+new [description:"look at vim-awesome recommendations" end:"1559620956" entry:"1559309706" modified:"1559620956" project:"code" status:"completed" tags:"evix" uuid:"860c8cc7-c9c5-4fec-923f-352d2baef28d"]
+---
+time 1559621566
+old [description:"add tmux\/restore options to .tmux.conf" entry:"1559308847" modified:"1559308847" project:"code" status:"pending" tags:"evix" uuid:"c8bf7dc3-9874-48a7-a78a-17a8c6edbea4"]
+new [description:"add tmux\/restore options to .tmux.conf" end:"1559621566" entry:"1559308847" modified:"1559621566" project:"code" status:"completed" tags:"evix" uuid:"c8bf7dc3-9874-48a7-a78a-17a8c6edbea4"]
+---

@@ -32,3 +32,8 @@
 {"description":"integrate bookmarked dotfiles to own","entry":"20190531T133446Z","modified":"20190531T135925Z","project":"code","status":"pending","tags":["evix","bash"],"uuid":"a384493f-5743-49b7-b794-ec6efd9de6ea"}
 {"description":"use custom bash prompt","entry":"20190531T163435Z","modified":"20190531T163435Z","project":"code","status":"pending","tags":["bash"],"uuid":"23328269-b1ab-4c5b-ae68-e45cd92fdba3"}
 {"description":"use custom bash prompt","entry":"20190531T163435Z","modified":"20190531T163451Z","project":"code","status":"pending","tags":["bash","evix"],"uuid":"23328269-b1ab-4c5b-ae68-e45cd92fdba3"}
+{"description":"figure out how vim <leader> works","entry":"20190604T040056Z","modified":"20190604T040056Z","project":"code","status":"pending","tags":["evix","vim"],"uuid":"a40617e5-a4a7-4818-9090-7a872eef6822"}
+{"description":"source muttrc.private","end":"20190604T040152Z","entry":"20190531T131820Z","modified":"20190604T040152Z","project":"code","status":"completed","tags":["evix"],"uuid":"8c7d5338-f84f-415c-b908-fc08aaa43cc4"}
+{"description":"integrate bookmarked dotfiles to own","end":"20190604T040236Z","entry":"20190531T133446Z","modified":"20190604T040236Z","project":"code","status":"completed","tags":["evix","bash"],"uuid":"a384493f-5743-49b7-b794-ec6efd9de6ea"}
+{"description":"look at vim-awesome recommendations","end":"20190604T040236Z","entry":"20190531T133506Z","modified":"20190604T040236Z","project":"code","status":"completed","tags":["evix"],"uuid":"860c8cc7-c9c5-4fec-923f-352d2baef28d"}
+{"description":"add tmux\/restore options to .tmux.conf","end":"20190604T041246Z","entry":"20190531T132047Z","modified":"20190604T041246Z","project":"code","status":"completed","tags":["evix"],"uuid":"c8bf7dc3-9874-48a7-a78a-17a8c6edbea4"}
