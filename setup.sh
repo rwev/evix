@@ -13,7 +13,9 @@ sudo apt-get install \
         htop \
         newsbeuter \
         timewarrior \
-        taskwarrior
+        taskwarrior \
+        calcurse \ # remind
+tmuxinator
 
 # mutt
 sudo pip install offlineimap

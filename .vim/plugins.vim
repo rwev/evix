@@ -51,6 +51,7 @@ nnoremap <C-P> :Files<CR>
 nnoremap <C-M> :Tags<CR>
 nnoremap <C-N> :Ag<CR>
 
+Plug 'farmergreg/vim-lastplace'
 " Code running
 Plug 'skywind3000/asyncrun.vim'
 nnoremap <F5> :call <SID>run()<CR>
@@ -66,6 +67,7 @@ endfunction
 
 
 " Editing
+Plug 'reedes/vim-pencil'
 Plug 'Chiel92/vim-autoformat'
 nnoremap <C-l> :Autoformat<CR>
 au BufWrite * :Autoformat
@@ -73,11 +75,10 @@ au BufWrite * :Autoformat
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-repeat'
 Plug 'junegunn/vim-easy-align'
 Plug 'mattn/emmet-vim'
-
 Plug 'shime/vim-livedown'
-
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Valloric/MatchTagAlways'
