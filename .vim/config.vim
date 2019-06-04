@@ -104,3 +104,4 @@ set guioptions-=R
 set guioptions-=l
 set guioptions-=L
 
+set formatoptions-=cro

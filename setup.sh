@@ -11,7 +11,13 @@ sudo apt-get install \
         tmux \
         zsh \
         htop \
-        newsbeuter
+        newsbeuter \
+        timewarrior \
+        taskwarrior
+
+# mutt
+sudo pip install offlineimap
+
 
 # formatters
 sudo python3.6 -m pip install black
