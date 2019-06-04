@@ -67,7 +67,6 @@ endfunction
 
 
 " Editing
-Plug 'reedes/vim-pencil'
 Plug 'Chiel92/vim-autoformat'
 nnoremap <C-l> :Autoformat<CR>
 au BufWrite * :Autoformat

@@ -4,5 +4,7 @@ plugins=(
 git
 z
 )
-source ~/.zsh_aliases
+source .bashrc
+source .bash_functions
+source .bash_aliases
 source $ZSH/oh-my-zsh.sh
