@@ -47,7 +47,7 @@ Plug 'junegunn/fzf.vim'
 if (executable('ag'))
         let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 endif
-nnoremap <C-P> :Files<CR>
+nnoremap <C-P> :GFiles<CR>
 nnoremap <C-M> :Tags<CR>
 nnoremap <C-N> :Ag<CR>
 
@@ -60,8 +60,7 @@ function! s:run()
         if &filetype == 'sh'
                 exec "AsyncRun! time bash %"
         elseif &filetype == 'python'
-                exec "AsyncRun!
-                time python %"
+                exec "AsyncRun! time python %"
         endif
 endfunction
 
