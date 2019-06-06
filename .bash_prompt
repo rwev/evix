@@ -1,0 +1,36 @@
+#!/usr/env/bin bash
+
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWSTASHSTATE=false
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWUPSTREAM="auto verbose name"
+GIT_PS1_DESCRIBE_STYLE="contains"
+GIT_PS1_SHOWCOLORHINTS=true
+GIT_PS1_HIDE_IF_PWD_IGNORED=false
+compile_prompt () {
+        local CONNECTBAR_DOWN=$'\u250C\u2500\u257C'
+                local CONNECTBAR_UP=$'\u2514\u2500\u257C'
+                local GITSPLITBAR=$'\u2570\u257C'
+                local SPLITBAR=$'\u257E\u2500\u257C'
+                local ARROW=$'\u25B6'
+                local c_gray='\e[01;30m'
+                local c_blue='\e[0;34m'
+                local c_cyan='\e[0;36m'
+                local c_reset='\e[0m'
+                PS1="\n${c_gray}"
+                PS1+="$CONNECTBAR_DOWN"
+                PS1+="[${c_blue}\u${c_gray}]"
+                PS1+="$SPLITBAR"
+                PS1+="[${c_blue}\j${c_gray}]"
+                PS1+="[${c_blue}$?${c_gray}]"
+                PS1+="$SPLITBAR"
+                PS1+="[${c_blue}\D{%H:%M:%S}${c_gray}]\n"
+                PS1+="$CONNECTBAR_UP"
+                PS1+="[${c_blue}\w${c_gray}]\n"
+                PS1+="$(__git_ps1 " \\u2570\\u257C[${c_cyan}%s${c_gray}]\\u257E\\u2500\\u257C[${c_cyan}$(git rev-parse --short HEAD 2> /dev/null)${c_gray}]")"
+                if [[ ! -z $(__git_ps1) ]]; then
+                        PS1+='\n'
+                                fi
+                                PS1+="$ARROW \[\e[0m\]"
+}
+PROMPT_COMMAND='compile_prompt'
