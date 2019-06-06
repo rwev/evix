@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 function _gitfile(){
         declare URL="https://raw.githubusercontent.com/$2"
                 echo "Downloading $URL to $1"
@@ -55,9 +57,43 @@ function _takedot() {
                 }; done
 }
 
+function sitedl() {
+    if [[ "$#" -eq "0" ]]
+    then {
+            echo "USAGE: curlrecur <URL> <DIR>"
+            exit 0
+    }
+    fi
 
+    # TODO add recursive depth option
+    echo "Downloading ${1} recursively to ${2}..."
 
+    if [[ -d $2 ]]; then {
+            echo "ERROR: Directory $2 already exists."
+            exit 0
+    }
+    fi
 
+    if ! curl -fLo ${2}/index.html --create-dirs ${1} -s ; then {
+            echo "ERROR: GET request to $1 returns an error code."
+            exit 0
+    }
+    fi
+
+    curl -s ${1} \
+            | grep "HREF" \
+            | awk -F '"' '{print $2}' \
+            | while read href ; do {
+    # TODO skip request to duplicate effective URLs
+    curl -fLo ${2}/${href} "$(dirname ${1})/${href}" -s -w '%{url_effective}\n';
+    }
+     done
+
+    echo "... done."
+    lynx ${2}/index.html
+}
+
+# TODO why no function keyword?
 ..() {
   local d=""
   limit=$1
