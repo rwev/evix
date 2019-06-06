@@ -13,7 +13,8 @@ export ANDROID_AVD_HOME=/root/.android/avd/
 export PATH=$PATH:/usr/gradle/gradle-5.4/bin
 export PATH=${PATH}:~/Android/Sdk/tools/bin/:~/Android/Sdk/platform-tools/bin/
 
-HISTCONTROL=ignoreboth
+HISTCONTROL=ignore
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+HISTFILE=~/.bash_history
