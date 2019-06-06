@@ -130,3 +130,14 @@ time 1559621566
 old [description:"add tmux\/restore options to .tmux.conf" entry:"1559308847" modified:"1559308847" project:"code" status:"pending" tags:"evix" uuid:"c8bf7dc3-9874-48a7-a78a-17a8c6edbea4"]
 new [description:"add tmux\/restore options to .tmux.conf" end:"1559621566" entry:"1559308847" modified:"1559621566" project:"code" status:"completed" tags:"evix" uuid:"c8bf7dc3-9874-48a7-a78a-17a8c6edbea4"]
 ---
+time 1559848946
+old [description:"add site curlynx to bash_functions" entry:"1559308955" modified:"1559311163" project:"code" status:"pending" tags:"evix,bash" uuid:"a366dc06-99cf-4fe4-b6dc-d6a59ea9c81d"]
+new [description:"add site curlynx to bash_functions" end:"1559848944" entry:"1559308955" modified:"1559848946" project:"code" status:"deleted" tags:"evix,bash" uuid:"a366dc06-99cf-4fe4-b6dc-d6a59ea9c81d"]
+---
+time 1559848952
+old [description:"add site dl to bash_functions" entry:"1559308943" modified:"1559311159" project:"code" status:"pending" tags:"evix,bash" uuid:"8b5d4fdf-4258-4052-a80b-fdf213891f86"]
+new [description:"add site dl to bash_functions" end:"1559848952" entry:"1559308943" modified:"1559848952" project:"code" status:"completed" tags:"evix,bash" uuid:"8b5d4fdf-4258-4052-a80b-fdf213891f86"]
+---
+time 1559848980
+new [description:"configure zsh to properly import .bash_aliases .bash_functions .bash_shopts .bashrc configs" entry:"1559848980" modified:"1559848980" project:"code" status:"pending" tags:"evix,bash" uuid:"c4179e77-c14d-415a-894a-8990e73c2abe"]
+---

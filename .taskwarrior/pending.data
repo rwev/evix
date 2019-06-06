@@ -1,8 +1,5 @@
 [description:"source setup.private.sh" entry:"1559308766" modified:"1559308766" project:"code" status:"pending" tags:"evix" uuid:"270271a7-9e93-4160-906f-82836bfdaa01"]
-[description:"add tmux\/restore options to .tmux.conf" end:"1559621566" entry:"1559308847" modified:"1559621566" project:"code" status:"completed" tags:"evix" uuid:"c8bf7dc3-9874-48a7-a78a-17a8c6edbea4"]
 [description:"add default tmux sessions (w\/ tmuxinator?): code, comms" entry:"1559308903" modified:"1559308903" project:"code" status:"pending" tags:"evix" uuid:"d9356909-a666-4666-a11b-9b21362763f2"]
-[description:"add site dl to bash_functions" entry:"1559308943" modified:"1559311159" project:"code" status:"pending" tags:"evix,bash" uuid:"8b5d4fdf-4258-4052-a80b-fdf213891f86"]
-[description:"add site curlynx to bash_functions" entry:"1559308955" modified:"1559311163" project:"code" status:"pending" tags:"evix,bash" uuid:"a366dc06-99cf-4fe4-b6dc-d6a59ea9c81d"]
 [description:"exec tasksh script for craiglist posting alerts" entry:"1559308996" modified:"1559308996" project:"code" status:"pending" tags:"evix" uuid:"39821dcc-d3a9-4a82-a9b1-53d5fd649d80"]
 [description:"verify whether vim plugin bindings conflict \/ override vim defaults" entry:"1559309047" modified:"1559309047" project:"code" status:"pending" tags:"evix" uuid:"e6703396-332b-4145-9a60-bcddd9fa1800"]
 [description:"drain oil from transfer case, manual transmission, and f\/r differentials" entry:"1559309211" modified:"1559309211" project:"home" status:"pending" tags:"auto,rodeo" uuid:"9199ad0f-b078-43b8-87b4-209c38503f57"]
@@ -14,3 +11,4 @@
 [description:"decide on cli chat" entry:"1559310997" modified:"1559310997" project:"code" status:"pending" tags:"evix" uuid:"b2d195c7-af76-4ebb-8438-2ce8c5bdb57a"]
 [description:"use custom bash prompt" entry:"1559320475" modified:"1559320491" project:"code" status:"pending" tags:"bash,evix" uuid:"23328269-b1ab-4c5b-ae68-e45cd92fdba3"]
 [description:"figure out how vim <leader> works" entry:"1559620856" modified:"1559620856" project:"code" status:"pending" tags:"evix,vim" uuid:"a40617e5-a4a7-4818-9090-7a872eef6822"]
+[description:"configure zsh to properly import .bash_aliases .bash_functions .bash_shopts .bashrc configs" entry:"1559848980" modified:"1559848980" project:"code" status:"pending" tags:"evix,bash" uuid:"c4179e77-c14d-415a-894a-8990e73c2abe"]
