@@ -1,3 +1,8 @@
+[description:"get replacement bigfoot tire" end:"1559871625" entry:"1559309286" modified:"1559871625" project:"home" status:"completed" tags:"auto,rodeo" uuid:"8b079e44-a04b-40e5-8e81-790de0027fe5"]
+[description:"make protonmail address" end:"1559871563" entry:"1559309739" modified:"1559871566" project:"code" status:"completed" tags:"evix,mail" uuid:"aff84820-97bc-488f-a948-bb268e68e6d0"]
+[description:"decide on cli calendar" end:"1559871566" entry:"1559310978" modified:"1559871567" project:"code" status:"completed" tags:"evix" uuid:"5ec0a17d-2e15-4b60-8edc-46b594ac70f2"]
+[description:"use custom bash prompt" end:"1559871567" entry:"1559320475" modified:"1559871568" project:"code" status:"completed" tags:"bash,evix" uuid:"23328269-b1ab-4c5b-ae68-e45cd92fdba3"]
+[description:"configure zsh to properly import .bash_aliases .bash_functions .bash_shopts .bashrc configs" end:"1559871568" entry:"1559848980" modified:"1559871570" project:"code" status:"completed" tags:"evix,bash" uuid:"c4179e77-c14d-415a-894a-8990e73c2abe"]
 [description:"add site dl to bash_functions" end:"1559848952" entry:"1559308943" modified:"1559848952" project:"code" status:"completed" tags:"evix,bash" uuid:"8b5d4fdf-4258-4052-a80b-fdf213891f86"]
 [description:"add site curlynx to bash_functions" end:"1559848944" entry:"1559308955" modified:"1559848946" project:"code" status:"deleted" tags:"evix,bash" uuid:"a366dc06-99cf-4fe4-b6dc-d6a59ea9c81d"]
 [description:"add tmux\/restore options to .tmux.conf" end:"1559621566" entry:"1559308847" modified:"1559621566" project:"code" status:"completed" tags:"evix" uuid:"c8bf7dc3-9874-48a7-a78a-17a8c6edbea4"]

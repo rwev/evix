@@ -141,3 +141,41 @@ new [description:"add site dl to bash_functions" end:"1559848952" entry:"1559308
 time 1559848980
 new [description:"configure zsh to properly import .bash_aliases .bash_functions .bash_shopts .bashrc configs" entry:"1559848980" modified:"1559848980" project:"code" status:"pending" tags:"evix,bash" uuid:"c4179e77-c14d-415a-894a-8990e73c2abe"]
 ---
+time 1559871566
+old [description:"make protonmail address" entry:"1559309739" modified:"1559311079" project:"code" status:"pending" tags:"evix,mail" uuid:"aff84820-97bc-488f-a948-bb268e68e6d0"]
+new [description:"make protonmail address" end:"1559871563" entry:"1559309739" modified:"1559871566" project:"code" status:"completed" tags:"evix,mail" uuid:"aff84820-97bc-488f-a948-bb268e68e6d0"]
+---
+time 1559871567
+old [description:"decide on cli calendar" entry:"1559310978" modified:"1559310978" project:"code" status:"pending" tags:"evix" uuid:"5ec0a17d-2e15-4b60-8edc-46b594ac70f2"]
+new [description:"decide on cli calendar" end:"1559871566" entry:"1559310978" modified:"1559871567" project:"code" status:"completed" tags:"evix" uuid:"5ec0a17d-2e15-4b60-8edc-46b594ac70f2"]
+---
+time 1559871568
+old [description:"use custom bash prompt" entry:"1559320475" modified:"1559320491" project:"code" status:"pending" tags:"bash,evix" uuid:"23328269-b1ab-4c5b-ae68-e45cd92fdba3"]
+new [description:"use custom bash prompt" end:"1559871567" entry:"1559320475" modified:"1559871568" project:"code" status:"completed" tags:"bash,evix" uuid:"23328269-b1ab-4c5b-ae68-e45cd92fdba3"]
+---
+time 1559871570
+old [description:"configure zsh to properly import .bash_aliases .bash_functions .bash_shopts .bashrc configs" entry:"1559848980" modified:"1559848980" project:"code" status:"pending" tags:"evix,bash" uuid:"c4179e77-c14d-415a-894a-8990e73c2abe"]
+new [description:"configure zsh to properly import .bash_aliases .bash_functions .bash_shopts .bashrc configs" end:"1559871568" entry:"1559848980" modified:"1559871570" project:"code" status:"completed" tags:"evix,bash" uuid:"c4179e77-c14d-415a-894a-8990e73c2abe"]
+---
+time 1559871595
+new [description:"further customize bash prompt" entry:"1559871595" modified:"1559871595" project:"code" status:"pending" tags:"evix" uuid:"bbe707c1-8dfb-4f10-9703-0dfd0ca60347"]
+---
+time 1559871612
+new [description:"fork pure zsh prompt and make nord" entry:"1559871612" modified:"1559871612" project:"code" status:"pending" tags:"evix" uuid:"d39ecaff-e88f-4880-bdbd-d9e60049b2b5"]
+---
+time 1559871625
+old [description:"get replacement bigfoot tire" entry:"1559309286" modified:"1559309286" project:"home" status:"pending" tags:"auto,rodeo" uuid:"8b079e44-a04b-40e5-8e81-790de0027fe5"]
+new [description:"get replacement bigfoot tire" end:"1559871625" entry:"1559309286" modified:"1559871625" project:"home" status:"completed" tags:"auto,rodeo" uuid:"8b079e44-a04b-40e5-8e81-790de0027fe5"]
+---
+time 1559871676
+new [description:"take to shop for starter replacement \/ rebuild" entry:"1559871676" modified:"1559871676" project:"home" status:"pending" tags:"auto,rodeo" uuid:"16c2bacc-0fb8-4e67-b881-d796e8e08deb"]
+---
+time 1559871690
+new [description:"get quotes for starter replacement \/ rebuild" entry:"1559871690" modified:"1559871690" project:"home" status:"pending" tags:"auto,rodeo" uuid:"5899f536-5bc3-4ebe-b402-e17d18064a28"]
+---
+time 1559871891
+new [description:"get hydroxide, 3rd party protonmail bridge, to build" entry:"1559871891" modified:"1559871891" project:"code" status:"pending" tags:"evix" uuid:"09b79149-6720-46a0-992c-4214fe0d30ca"]
+---
+time 1559871918
+new [description:"setup and test hydroxide (requires paid protonmail accoun?)" entry:"1559871918" modified:"1559871918" project:"code" status:"pending" tags:"evix" uuid:"5ec658a9-53d6-4367-b1e2-e898e5a930c8"]
+---
