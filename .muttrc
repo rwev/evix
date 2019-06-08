@@ -1,0 +1,20 @@
+set ssl_starttls=no
+set ssl_force_tls=no
+
+set imap_passive
+set imap_check_subscribed
+
+set mail_check=60
+set net_inc=5
+
+set abort_nosubject=yes
+
+set editor="vim"
+
+set include=ask-yes
+set postpone=ask-yes
+set print=ask-yes
+
+# set record="+Sent"
+# set postponed="+Drafts"
+

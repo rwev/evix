@@ -179,3 +179,43 @@ new [description:"get hydroxide, 3rd party protonmail bridge, to build" entry:"1
 time 1559871918
 new [description:"setup and test hydroxide (requires paid protonmail accoun?)" entry:"1559871918" modified:"1559871918" project:"code" status:"pending" tags:"evix" uuid:"5ec658a9-53d6-4367-b1e2-e898e5a930c8"]
 ---
+time 1559878946
+new [description:"add go install to setup.sh" entry:"1559878946" modified:"1559878946" project:"code" status:"pending" tags:"evix" uuid:"39859b1a-4785-4a8d-93a1-2fe28dfbb3e5"]
+---
+time 1559878970
+new [description:"add hydroxide setup to setup.sh" entry:"1559878970" modified:"1559878970" project:"code" status:"pending" tags:"evix" uuid:"07124955-22b9-4b16-9c49-7c16d33e12cf"]
+---
+time 1559880580
+new [description:"write script to start hydroxide and write imap and smtp urls to .muttrc" entry:"1559880580" modified:"1559880580" project:"code" status:"pending" tags:"evix,protonmail" uuid:"7cdb7a28-7e80-4aff-9208-e34a78c00232"]
+---
+time 1559880649
+old [description:"get hydroxide, 3rd party protonmail bridge, to build" entry:"1559871891" modified:"1559871891" project:"code" status:"pending" tags:"evix" uuid:"09b79149-6720-46a0-992c-4214fe0d30ca"]
+new [description:"get hydroxide, 3rd party protonmail bridge, to build" entry:"1559871891" modified:"1559880649" project:"code" status:"pending" tags:"evix,protonmail" uuid:"09b79149-6720-46a0-992c-4214fe0d30ca"]
+---
+time 1559880650
+old [description:"setup and test hydroxide (requires paid protonmail accoun?)" entry:"1559871918" modified:"1559871918" project:"code" status:"pending" tags:"evix" uuid:"5ec658a9-53d6-4367-b1e2-e898e5a930c8"]
+new [description:"setup and test hydroxide (requires paid protonmail accoun?)" entry:"1559871918" modified:"1559880650" project:"code" status:"pending" tags:"evix,protonmail" uuid:"5ec658a9-53d6-4367-b1e2-e898e5a930c8"]
+---
+time 1559880651
+old [description:"add hydroxide setup to setup.sh" entry:"1559878970" modified:"1559878970" project:"code" status:"pending" tags:"evix" uuid:"07124955-22b9-4b16-9c49-7c16d33e12cf"]
+new [description:"add hydroxide setup to setup.sh" entry:"1559878970" modified:"1559880651" project:"code" status:"pending" tags:"evix,protonmail" uuid:"07124955-22b9-4b16-9c49-7c16d33e12cf"]
+---
+time 1559880661
+old [description:"get mutt + protonmail working" entry:"1559310970" modified:"1559311079" project:"code" status:"pending" tags:"evix,mail" uuid:"25d8410c-4400-4031-afdd-5642dd69c509"]
+new [description:"get mutt + protonmail working" entry:"1559310970" modified:"1559880661" project:"code" status:"pending" tags:"evix,protonmail" uuid:"25d8410c-4400-4031-afdd-5642dd69c509"]
+---
+time 1559887666
+new [description:"figure out how to render HTML emails in mutt" entry:"1559887666" modified:"1559887666" project:"code" status:"pending" tags:"evix" uuid:"cdd967e5-37a5-469f-a343-391f40564f6a"]
+---
+time 1559970599
+old [description:"get hydroxide, 3rd party protonmail bridge, to build" entry:"1559871891" modified:"1559880649" project:"code" status:"pending" tags:"evix,protonmail" uuid:"09b79149-6720-46a0-992c-4214fe0d30ca"]
+new [description:"get hydroxide, 3rd party protonmail bridge, to build" end:"1559970597" entry:"1559871891" modified:"1559970599" project:"code" status:"completed" tags:"evix,protonmail" uuid:"09b79149-6720-46a0-992c-4214fe0d30ca"]
+---
+time 1559970600
+old [description:"setup and test hydroxide (requires paid protonmail accoun?)" entry:"1559871918" modified:"1559880650" project:"code" status:"pending" tags:"evix,protonmail" uuid:"5ec658a9-53d6-4367-b1e2-e898e5a930c8"]
+new [description:"setup and test hydroxide (requires paid protonmail accoun?)" end:"1559970599" entry:"1559871918" modified:"1559970600" project:"code" status:"completed" tags:"evix,protonmail" uuid:"5ec658a9-53d6-4367-b1e2-e898e5a930c8"]
+---
+time 1559970601
+old [description:"write script to start hydroxide and write imap and smtp urls to .muttrc" entry:"1559880580" modified:"1559880580" project:"code" status:"pending" tags:"evix,protonmail" uuid:"7cdb7a28-7e80-4aff-9208-e34a78c00232"]
+new [description:"write script to start hydroxide and write imap and smtp urls to .muttrc" end:"1559970600" entry:"1559880580" modified:"1559970601" project:"code" status:"completed" tags:"evix,protonmail" uuid:"7cdb7a28-7e80-4aff-9208-e34a78c00232"]
+---

@@ -10,8 +10,11 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/
 export ANDROID_HOME=~/Android/Sdk/
 export ANDROID_AVD_HOME=/root/.android/avd/
 
-export PATH=$PATH:/usr/gradle/gradle-5.4/bin
-export PATH=${PATH}:~/Android/Sdk/tools/bin/:~/Android/Sdk/platform-tools/bin/
+export PATH=$PATH:/usr/gradle/gradle-5.4/bin/
+export PATH=$PATH:~/Android/Sdk/tools/bin/:~/Android/Sdk/platform-tools/bin/
+
+export PATH=${PATH}:~/go/bin/
+
 
 HISTCONTROL=ignore
 HISTSIZE=1000
