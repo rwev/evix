@@ -15,3 +15,4 @@
 [description:"add hydroxide setup to setup.sh" end:"1559972830" entry:"1559878970" modified:"1559972836" project:"code" status:"completed" tags:"evix,protonmail" uuid:"07124955-22b9-4b16-9c49-7c16d33e12cf"]
 [description:"send patagonia to pittsburgh" entry:"1559972101" modified:"1559972101" project:"home" status:"pending" uuid:"99515732-f238-4ce0-b739-d8487d5b3b6d"]
 [description:"tmux-cpu-mem-load and expose individual variables" entry:"1559972148" modified:"1559972148" project:"code" status:"pending" uuid:"b36004bb-61dc-491d-887a-95019daaa022"]
+[description:"define taskwarrior contexts" entry:"1559973027" modified:"1559973027" project:"code" status:"pending" uuid:"b191954e-ea8f-4e64-90ad-dc1955c916e3"]

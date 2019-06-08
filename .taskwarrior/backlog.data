@@ -68,3 +68,4 @@
 {"description":"source setup.private.sh","end":"20190608T054706Z","entry":"20190531T131926Z","modified":"20190608T054709Z","project":"code","status":"completed","tags":["evix"],"uuid":"270271a7-9e93-4160-906f-82836bfdaa01"}
 {"description":"get mutt + protonmail working","end":"20190608T054709Z","entry":"20190531T135610Z","modified":"20190608T054710Z","project":"code","status":"completed","tags":["evix","protonmail"],"uuid":"25d8410c-4400-4031-afdd-5642dd69c509"}
 {"description":"add hydroxide setup to setup.sh","end":"20190608T054710Z","entry":"20190607T034250Z","modified":"20190608T054716Z","project":"code","status":"completed","tags":["evix","protonmail"],"uuid":"07124955-22b9-4b16-9c49-7c16d33e12cf"}
+{"description":"define taskwarrior contexts","entry":"20190608T055027Z","modified":"20190608T055027Z","project":"code","status":"pending","uuid":"b191954e-ea8f-4e64-90ad-dc1955c916e3"}

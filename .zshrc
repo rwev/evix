@@ -1,6 +1,6 @@
 #!/usr/env/bin zsh
 
-ZSH_THEME="spaceship"
+fpath=( "$HOME/.zfunctions" $fpath  )
 
 plugins=(
 
@@ -42,5 +42,9 @@ fi
 
 HISTFILE=~/.zsh_history
 
+ZSH_THEME=""
 source $ZSH/oh-my-zsh.sh
+
+autoload -U promptinit; promptinit
+prompt pure
 

@@ -241,3 +241,6 @@ time 1559972836
 old [description:"add hydroxide setup to setup.sh" entry:"1559878970" modified:"1559880651" project:"code" status:"pending" tags:"evix,protonmail" uuid:"07124955-22b9-4b16-9c49-7c16d33e12cf"]
 new [description:"add hydroxide setup to setup.sh" end:"1559972830" entry:"1559878970" modified:"1559972836" project:"code" status:"completed" tags:"evix,protonmail" uuid:"07124955-22b9-4b16-9c49-7c16d33e12cf"]
 ---
+time 1559973027
+new [description:"define taskwarrior contexts" entry:"1559973027" modified:"1559973027" project:"code" status:"pending" uuid:"b191954e-ea8f-4e64-90ad-dc1955c916e3"]
+---
