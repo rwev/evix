@@ -244,3 +244,61 @@ new [description:"add hydroxide setup to setup.sh" end:"1559972830" entry:"15598
 time 1559973027
 new [description:"define taskwarrior contexts" entry:"1559973027" modified:"1559973027" project:"code" status:"pending" uuid:"b191954e-ea8f-4e64-90ad-dc1955c916e3"]
 ---
+time 1559976054
+old [description:"fork pure zsh prompt and make nord" entry:"1559871612" modified:"1559871612" project:"code" status:"pending" tags:"evix" uuid:"d39ecaff-e88f-4880-bdbd-d9e60049b2b5"]
+new [description:"fork pure zsh prompt and make nord" end:"1559976052" entry:"1559871612" modified:"1559976054" project:"code" status:"deleted" tags:"evix" uuid:"d39ecaff-e88f-4880-bdbd-d9e60049b2b5"]
+---
+time 1560017198
+new [description:"find sig registration, sign, and mail" entry:"1560017198" modified:"1560017198" project:"home" status:"pending" tags:"guns" uuid:"a4c90d77-4e24-4d39-9ca4-be7d4d7acb56"]
+---
+time 1560017224
+new [description:"buy pmr, have sent?" entry:"1560017224" modified:"1560017224" project:"home" status:"pending" tags:"guns" uuid:"f87dd122-6e0a-40e2-83f0-79d86df8f61d"]
+---
+time 1560017258
+new [description:"research lightweight IIIa body armor and purchase" entry:"1560017258" modified:"1560017258" project:"home" status:"pending" tags:"prep" uuid:"b8956a92-765a-4756-ba6a-daa64c765d66"]
+---
+time 1560017295
+new [description:"buy AR15 magazines, get expert opinion (nutnfancy?)" entry:"1560017295" modified:"1560017295" project:"home" status:"pending" tags:"prep" uuid:"6d3f2dc7-63b8-4706-9088-d6862262ff0b"]
+---
+time 1560017323
+new [description:"tight front brake up" entry:"1560017323" modified:"1560017323" project:"home" status:"pending" tags:"auto,xl200" uuid:"290a63b9-932c-4e23-8957-18ae83c2d4cd"]
+---
+time 1560017337
+new [description:"raise rear brake position" entry:"1560017337" modified:"1560017337" project:"home" status:"pending" tags:"auto,xl600" uuid:"3d64a9f4-eb24-4390-a395-20d6ebf707a6"]
+---
+time 1560037097
+old [description:"tmux-cpu-mem-load and expose individual variables" entry:"1559972148" modified:"1559972148" project:"code" status:"pending" uuid:"b36004bb-61dc-491d-887a-95019daaa022"]
+new [description:"tmux-cpu-mem-load and expose individual variables" entry:"1559972148" modified:"1560037097" project:"code" status:"pending" tags:"evix" uuid:"b36004bb-61dc-491d-887a-95019daaa022"]
+---
+time 1560037097
+old [description:"define taskwarrior contexts" entry:"1559973027" modified:"1559973027" project:"code" status:"pending" uuid:"b191954e-ea8f-4e64-90ad-dc1955c916e3"]
+new [description:"define taskwarrior contexts" entry:"1559973027" modified:"1560037097" project:"code" status:"pending" tags:"evix" uuid:"b191954e-ea8f-4e64-90ad-dc1955c916e3"]
+---
+time 1560037124
+old [description:"define taskwarrior contexts" entry:"1559973027" modified:"1560037097" project:"code" status:"pending" tags:"evix" uuid:"b191954e-ea8f-4e64-90ad-dc1955c916e3"]
+new [description:"define taskwarrior contexts" end:"1560037124" entry:"1559973027" modified:"1560037124" project:"code" status:"completed" tags:"evix" uuid:"b191954e-ea8f-4e64-90ad-dc1955c916e3"]
+---
+time 1560037266
+new [description:"fix front brake light switch" entry:"1560037266" modified:"1560037266" status:"pending" tags:"xl200" uuid:"aebfd8a8-a93b-400c-a594-dcccd8224aa6"]
+---
+time 1560037290
+new [description:"context:vehicles fix" entry:"1560037290" modified:"1560037290" status:"pending" uuid:"64639932-0f29-438f-9a50-2ae400528dc7"]
+---
+time 1560037312
+old [description:"context:vehicles fix" entry:"1560037290" modified:"1560037290" status:"pending" uuid:"64639932-0f29-438f-9a50-2ae400528dc7"]
+new [description:"context:vehicles fix" end:"1560037310" entry:"1560037290" modified:"1560037312" status:"deleted" uuid:"64639932-0f29-438f-9a50-2ae400528dc7"]
+---
+time 1560037320
+old [description:"fix front brake light switch" entry:"1560037266" modified:"1560037266" status:"pending" tags:"xl200" uuid:"aebfd8a8-a93b-400c-a594-dcccd8224aa6"]
+new [description:"fix front brake light switch" entry:"1560037266" modified:"1560037320" project:"home" status:"pending" tags:"xl200" uuid:"aebfd8a8-a93b-400c-a594-dcccd8224aa6"]
+---
+time 1560037389
+new [description:"evix make private repo for personal data: calendar, tasks, etc" entry:"1560037389" modified:"1560037389" project:"code" status:"pending" uuid:"51238e8c-0cdc-46a5-8d87-5bcc26bb1df6"]
+---
+time 1560037401
+old [description:"evix make private repo for personal data: calendar, tasks, etc" entry:"1560037389" modified:"1560037389" project:"code" status:"pending" uuid:"51238e8c-0cdc-46a5-8d87-5bcc26bb1df6"]
+new [description:"evix make private repo for personal data: calendar, tasks, etc" end:"1560037400" entry:"1560037389" modified:"1560037401" project:"code" status:"deleted" uuid:"51238e8c-0cdc-46a5-8d87-5bcc26bb1df6"]
+---
+time 1560037410
+new [description:"make private repo for personal data: calendar, tasks, etc" entry:"1560037410" modified:"1560037410" project:"code" status:"pending" tags:"evix" uuid:"31fa637f-0ddc-4183-a10f-7d8399c250a9"]
+---

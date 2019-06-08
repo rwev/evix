@@ -15,5 +15,7 @@ max_active_tasks=7
 regex=true
 weekstart=Monday
 
-# TODO define contexts
+# define contexts
 
+context.evix=project:code +evix
+context.vehicles=project:home +auto
