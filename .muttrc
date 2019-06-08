@@ -15,6 +15,9 @@ set include=ask-yes
 set postpone=ask-yes
 set print=ask-yes
 
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+
 # set record="+Sent"
 # set postponed="+Drafts"
 

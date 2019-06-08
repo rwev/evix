@@ -1,3 +1,6 @@
+[description:"get hydroxide, 3rd party protonmail bridge, to build" end:"1559970597" entry:"1559871891" modified:"1559970599" project:"code" status:"completed" tags:"evix,protonmail" uuid:"09b79149-6720-46a0-992c-4214fe0d30ca"]
+[description:"setup and test hydroxide (requires paid protonmail accoun?)" end:"1559970599" entry:"1559871918" modified:"1559970600" project:"code" status:"completed" tags:"evix,protonmail" uuid:"5ec658a9-53d6-4367-b1e2-e898e5a930c8"]
+[description:"write script to start hydroxide and write imap and smtp urls to .muttrc" end:"1559970600" entry:"1559880580" modified:"1559970601" project:"code" status:"completed" tags:"evix,protonmail" uuid:"7cdb7a28-7e80-4aff-9208-e34a78c00232"]
 [description:"get replacement bigfoot tire" end:"1559871625" entry:"1559309286" modified:"1559871625" project:"home" status:"completed" tags:"auto,rodeo" uuid:"8b079e44-a04b-40e5-8e81-790de0027fe5"]
 [description:"make protonmail address" end:"1559871563" entry:"1559309739" modified:"1559871566" project:"code" status:"completed" tags:"evix,mail" uuid:"aff84820-97bc-488f-a948-bb268e68e6d0"]
 [description:"decide on cli calendar" end:"1559871566" entry:"1559310978" modified:"1559871567" project:"code" status:"completed" tags:"evix" uuid:"5ec0a17d-2e15-4b60-8edc-46b594ac70f2"]
