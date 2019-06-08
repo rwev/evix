@@ -11,19 +11,21 @@ sudo apt-get install \
         tmux \
         zsh \
         htop \
+        mutt \
+        lynx \
         newsbeuter \
         timewarrior \
         taskwarrior \
         calcurse \ # remind
 tmuxinator
 
-# mutt
-sudo pip install offlineimap
-
+# mail
+GO111MODULE=on go get github.com/emersion/hydroxide/cmd/hydroxide
 
 # formatters
 sudo python3.6 -m pip install black
 sudo npm install -g remark-cli js-beautify
+go get -u mvdan.cc/sh/cmd/shfmt
 
 # zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -46,9 +48,9 @@ sudo fc-cache -fv # fc-list | grep "Source Code Pro" to confirm
 
 # pantheon terminal
 gsettings set org.pantheon.terminal.settings font 'Source Code Pro for Powerline Regular 16'
-gsettings set  org.pantheon.terminal.settings foreground '#D8DEE9'
-gsettings set  org.pantheon.terminal.settings background '#2E3440'
-gsettings set  org.pantheon.terminal.settings palette '#3B4252:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#88C0D0:#E5E9F0:#4C566A:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#8FBCBB:#ECEFF4'
+gsettings set org.pantheon.terminal.settings foreground '#D8DEE9'
+gsettings set org.pantheon.terminal.settings background '#2E3440'
+gsettings set org.pantheon.terminal.settings palette '#3B4252:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#88C0D0:#E5E9F0:#4C566A:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#8FBCBB:#ECEFF4'
 gsettings set org.pantheon.terminal.settings tab-bar-behavior 'Never Show Tabs'
 gsettings set org.pantheon.terminal.settings remember-tabs false
 gsettings set org.pantheon.terminal.settings save-exited-tabs false

@@ -1,3 +1,4 @@
+[description:"figure out how to render HTML emails in mutt" end:"1559972456" entry:"1559887666" modified:"1559972456" project:"code" status:"completed" tags:"evix" uuid:"cdd967e5-37a5-469f-a343-391f40564f6a"]
 [description:"get hydroxide, 3rd party protonmail bridge, to build" end:"1559970597" entry:"1559871891" modified:"1559970599" project:"code" status:"completed" tags:"evix,protonmail" uuid:"09b79149-6720-46a0-992c-4214fe0d30ca"]
 [description:"setup and test hydroxide (requires paid protonmail accoun?)" end:"1559970599" entry:"1559871918" modified:"1559970600" project:"code" status:"completed" tags:"evix,protonmail" uuid:"5ec658a9-53d6-4367-b1e2-e898e5a930c8"]
 [description:"write script to start hydroxide and write imap and smtp urls to .muttrc" end:"1559970600" entry:"1559880580" modified:"1559970601" project:"code" status:"completed" tags:"evix,protonmail" uuid:"7cdb7a28-7e80-4aff-9208-e34a78c00232"]
