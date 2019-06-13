@@ -9,8 +9,8 @@ function diffconfs() {
         cat $1 | sort -b >$tmpfn1
         cat $2 | sort -b >$tmpfn2
 
-        rm $tmpfn1 $tmpfn2
         vimdiff $tmpfn1 $tmpfn2
+        rm $tmpfn1 $tmpfn2
 }
 
 function filec() {
@@ -296,7 +296,7 @@ function washmutt() {
         echo "... done."
 }
 
-function proton() {
+function protonmutt() {
 
         if ! [ $# -eq 4 ]; then
                 {
@@ -333,4 +333,15 @@ function proton() {
         read
 
         mutt -F ${muttfile}
+}
+
+function pubip() {
+        echo $(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1 -d'/')
+}
+
+function passwnorm() {
+        echo $(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 12)
+}
+function passwspec() {
+        echo $(LC_ALL=C tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' </dev/urandom | head -c 18)
 }

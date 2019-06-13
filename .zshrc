@@ -43,6 +43,8 @@ fi
 HISTFILE=~/.zsh_history
 
 ZSH_THEME=""
+ZSH=~/.oh-my-zsh
+
 source $ZSH/oh-my-zsh.sh
 
 autoload -U promptinit; promptinit
