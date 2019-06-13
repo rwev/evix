@@ -20,11 +20,12 @@ alias rm='rm -v'
 
 alias ls='LC_COLLATE=C ls -lAh --color=auto --time-style="+%Y-%m-%d +%H:%M:%S" --group-directories-first'
 
-alias t='task'
 alias tw='timew :ids'
 alias tws='tw summary'
 
-alias cal="calcurse"
+alias t='task'
+alias tcal='t project:calendar +DUE && t calendar'
+alias ttdo='t list 
 
 alias youtube-dl='youtube-dl --output "%(id)s-%(title)s.%(ext)s"'
 alias yta='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --audio-format best'

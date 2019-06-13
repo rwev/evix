@@ -83,7 +83,7 @@ color.calendar.due.today=bold black on cyan
 color.calendar.holiday=bold blue on white
 color.calendar.overdue=white on red
 color.calendar.today=bold black on cyan
-color.calendar.weekend=bright white on bright black
+color.calendar.weekend=white on black
 color.calendar.weeknumber=bold black
 
 #+-----------------+
