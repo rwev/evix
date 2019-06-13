@@ -1,0 +1,7 @@
+{
+        "journals": {
+                "personal": "~/.jrnls/personal.txt",
+                "work": "~/.jrnls/work.txt"
+        },
+        "editor": "vim"
+}

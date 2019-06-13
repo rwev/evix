@@ -4,6 +4,7 @@ alias apt='sudo apt-get'
 alias up='apt update && apt upgrade'
 
 alias lynx='lynx -cfg=~/.lynxrc'
+alias lynxd='lynx -dump -stdin'
 
 alias gitc="git commit -a -m"
 alias gits="git status"
@@ -27,7 +28,6 @@ alias tws='tw summary'
 
 alias t='task'
 alias tcal='t project:calendar +DUE && t calendar'
-alias ttdo='t list 
 
 alias youtube-dl='youtube-dl --output "%(id)s-%(title)s.%(ext)s"'
 alias yta='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --audio-format best'
