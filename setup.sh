@@ -5,7 +5,7 @@ sudo apt-get update && sudo apt-get upgrade
 
 # terminal environment
 sudo apt-get install zsh tmux vim mutt lynx newsbeuter taskwarrior timewarrior
-htop iftop
+weechat
 sudo python3.6 -m pip install jrnl
 
 ## zsh
@@ -55,4 +55,29 @@ GO111MODULE=on go get github.com/emersion/hydroxide/cmd/hydroxide
 # data processing
 sudo apt-get install pandoc jq shyaml csvkit silversearcher-ag pv
 
+export FD_VER='7.3.0'
+wget https://github.com/sharkdp/fd/releases/download/v${FD_VER}/fd_${FD_VER}_amd64.deb
+sudo dpkg -i fd_${FD_VER}_amd64.deb
 
+export BAT_VER='0.11.0'
+wget https://github.com/sharkdp/bat/releases/download/v${BAT_VER}/bat_${BAT_VER}_amd64.deb
+sudo dpkg -i bat_${BAT_VER}_amd64.deb
+
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+# system information
+sudo python3.6 -m pip install speedtest-cli
+sudo apt-get install htop iftop neofetch inxi
+
+# networking
+sudo apt-get install wget curl
+
+# media
+sudo apt-get install cmus youtube-dl
+
+# cash
+sudo apt-get install ledger
+git clone https://github.com/andmarti1424/sc-im.git
+cd sc-im/src
+make && sudo make install

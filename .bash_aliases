@@ -3,6 +3,10 @@
 alias apt='sudo apt-get'
 alias up='apt update && apt upgrade'
 
+alias cat='bat'
+alias find='fd'
+# alias grep='ripgrep'
+
 alias lynx='lynx -cfg=~/.lynxrc'
 alias lynxd='lynx -dump -stdin'
 
@@ -13,7 +17,9 @@ alias gitf="git ls-files"
 alias gitconf="vim ./.git/config"
 
 alias grepnocom="grep -v '^$\|^\s*\#'"
-alias grepnums='grep --line-number --color=auto'
+        alias grepnums='grep --line-number --color=auto'
+
+alias weather='curl wttr.in'
 
 alias diff='diff -u'
 

@@ -1,7 +1,14 @@
 {
-        "journals": {
-                "personal": "~/.jrnls/personal.txt",
-                "work": "~/.jrnls/work.txt"
-        },
-        "editor": "vim"
+  "journals": {
+    "personal": "~/.jrnls/personal.txt",
+    "work": "~/.jrnls/work.txt"
+  },
+  "editor": "vim",
+  "default_minute": 0,
+  "encrypt": false,
+  "linewrap": 79,
+  "tagsymbols": "@",
+  "default_hour": 9,
+  "highlight": true,
+  "timeformat": "%Y-%m-%d %H:%M"
 }

@@ -44,12 +44,10 @@ nnoremap <F9> :UndotreeToggle<cr>
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-if (executable('ag'))
-        let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
-endif
-nnoremap <C-P> :GFiles<CR>
-nnoremap <C-M> :Tags<CR>
-nnoremap <C-N> :Ag<CR>
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
+
+nnoremap <C-N> :GFiles<CR>
+nnoremap <C-P> :Ag<CR>
 
 Plug 'farmergreg/vim-lastplace'
 " Code running
@@ -67,8 +65,7 @@ endfunction
 
 " Editing
 Plug 'Chiel92/vim-autoformat'
-nnoremap <C-l> :Autoformat<CR>
-au BufWrite * :Autoformat
+nnoremap <C-K> :Autoformat<CR>
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
