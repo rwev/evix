@@ -27,7 +27,7 @@ alias tw='timew :ids'
 alias tws='tw summary'
 
 alias t='task'
-alias tcal='t project:calendar +DUE && t calendar'
+alias tcal='t list project:calendar +DUE && t calendar'
 
 alias youtube-dl='youtube-dl --output "%(id)s-%(title)s.%(ext)s"'
 alias yta='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --audio-format best'

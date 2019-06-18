@@ -13,5 +13,5 @@ list.all.tags=true
 
 max_active_tasks=7
 regex=true
-weekstart=Monday
+weekstart=Sunday
 
