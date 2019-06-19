@@ -2,6 +2,12 @@
 
 # prelim
 sudo apt-get update && sudo apt-get upgrade
+curl https://sh.rustup.rs -sSf | sh
+
+wget -c https://dl.google.com/go/go1.12.6.linux-amd64.tar.gz
+sudo tar -C /.go -xvzf go1.12.6.linux-amd64.tar.gz
+
+sudo apt-get install python3.6 
 
 # terminal environment
 sudo apt-get install zsh tmux vim mutt lynx newsbeuter taskwarrior timewarrior
@@ -25,8 +31,9 @@ curl -fLo ~/.vim/colors/nord.vim --create-dirs https://raw.githubusercontent.com
 
 ### auto-formatters
 sudo python3.6 -m pip install black
-sudo npm install -g remark-cli js-beautify
+sudo npm install -g remark-cli js-beautify eslint
 go get -u mvdan.cc/sh/cmd/shfmt
+cargo install rustfmt
 
 ## patch fonts
 curl -fLo ./Source\ Code\ Pro\ Medium\ for\ Powerline.otf --create-dirs
@@ -52,8 +59,18 @@ xrdb -merge ./nord-xresources
 ## mail
 GO111MODULE=on go get github.com/emersion/hydroxide/cmd/hydroxide
 
+# cli utils
+sudo apt-get install qalc
+sudo npm install -g tldr
+
+# TODO entr
+# TODO lsd 
+# workflow
+# TODO tig
+
+
 # data processing
-sudo apt-get install pandoc jq shyaml csvkit silversearcher-ag pv
+sudo apt-get install pandoc jq shyaml csvkit silversearcher-ag pv 
 
 export FD_VER='7.3.0'
 wget https://github.com/sharkdp/fd/releases/download/v${FD_VER}/fd_${FD_VER}_amd64.deb
@@ -61,7 +78,9 @@ sudo dpkg -i fd_${FD_VER}_amd64.deb
 
 export BAT_VER='0.11.0'
 wget https://github.com/sharkdp/bat/releases/download/v${BAT_VER}/bat_${BAT_VER}_amd64.deb
-sudo dpkg -i bat_${BAT_VER}_amd64.deb
+sudo dpkg -i bat_${BAT_VER}_amd64.debi
+
+# TODO ripgrep
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install

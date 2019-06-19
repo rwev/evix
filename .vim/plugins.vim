@@ -11,7 +11,15 @@ Plug 'mattn/webapi-vim'
 
 " Syntax / Code Completion
 Plug 'sheerun/vim-polyglot'
-Plug 'w0rp/ale' " TODO fixers
+Plug 'w0rp/ale' 
+let g:ale_fixers = {
+\       '*': ['remove_trailing_lines', 'trim_whitespace'],
+\        'bash': ['shfmt'],
+\        'javascript': ['eslint'],
+\        'python': ['black'],
+\        'rust': ['rustfmt']
+\}
+
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py'  }
 
 " Interface
@@ -19,8 +27,10 @@ Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
+
 let g:airline_theme='nord'
 let g:airline_powerline_fonts=1
+let g:airline_statusline_ontop=1
 
 Plug 'nathanaelkane/vim-indent-guides'
 
@@ -65,7 +75,7 @@ endfunction
 
 " Editing
 Plug 'Chiel92/vim-autoformat'
-nnoremap <C-K> :Autoformat<CR>
+nnoremap <C-K> :ALEFix :Autoformat<CR>
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
