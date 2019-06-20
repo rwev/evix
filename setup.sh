@@ -10,8 +10,7 @@ sudo tar -C /.go -xvzf go1.12.6.linux-amd64.tar.gz
 sudo apt-get install python3.6 
 
 # terminal environment
-sudo apt-get install zsh tmux vim mutt lynx newsbeuter taskwarrior timewarrior
-weechat
+sudo apt-get install zsh tmux vim mutt lynx newsbeuter weechat
 sudo python3.6 -m pip install jrnl
 
 ## zsh

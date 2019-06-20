@@ -12,12 +12,16 @@ alias lynxd='lynx -dump -stdin'
 
 alias gitc="git commit -a -m"
 alias gits="git status"
+alias gitd="git diff"
+alias gitf="git ls-files"
 alias gitconf="vim ./.git/config"
 
 alias grepnocom="grep -v '^$\|^\s*\#'"
         alias grepnums='grep --line-number --color=auto'
 
 alias weather='curl wttr.in'
+
+alias cal='calcurse'
 
 alias diff='diff -u'
 
@@ -26,12 +30,6 @@ alias mv='mv -v'
 alias rm='rm -v'
 
 alias ls='LC_COLLATE=C ls -lAh --color=auto --time-style="+%Y-%m-%d +%H:%M:%S" --group-directories-first'
-
-alias tw='timew :ids'
-alias tws='tw summary'
-
-alias t='task'
-alias tcal='t list project:calendar +DUE && t calendar'
 
 alias youtube-dl='youtube-dl --output "%(id)s-%(title)s.%(ext)s"'
 alias yta='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --audio-format best'
