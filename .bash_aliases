@@ -12,8 +12,6 @@ alias lynxd='lynx -dump -stdin'
 
 alias gitc="git commit -a -m"
 alias gits="git status"
-alias gitd="git diff"
-alias gitf="git ls-files"
 alias gitconf="vim ./.git/config"
 
 alias grepnocom="grep -v '^$\|^\s*\#'"
