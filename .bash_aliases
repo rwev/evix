@@ -5,7 +5,7 @@ alias up='apt update && apt upgrade'
 
 alias cat='bat'
 alias find='fd'
-# alias grep='ripgrep'
+alias grep='rg'
 
 alias lynx='lynx -cfg=~/.lynxrc'
 alias lynxd='lynx -dump -stdin'

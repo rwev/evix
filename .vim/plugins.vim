@@ -57,7 +57,7 @@ Plug 'junegunn/fzf.vim'
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 
 nnoremap <C-N> :GFiles<CR>
-nnoremap <C-P> :Ag<CR>
+nnoremap <C-P> :Rg<CR>
 
 Plug 'farmergreg/vim-lastplace'
 " Code running

@@ -67,19 +67,23 @@ sudo npm install -g tldr
 # workflow
 # TODO tig
 
-
 # data processing
-sudo apt-get install pandoc jq shyaml csvkit silversearcher-ag pv 
+sudo apt-get install pandoc jq shyaml csvkit pv 
 
 export FD_VER='7.3.0'
-wget https://github.com/sharkdp/fd/releases/download/v${FD_VER}/fd_${FD_VER}_amd64.deb
-sudo dpkg -i fd_${FD_VER}_amd64.deb
+export FD_DEB="fd_${FD_VER}_amd64.deb"
+wget https://github.com/sharkdp/fd/releases/download/v${FD_VER}/${FD_DEB}
+sudo dpkg -i ${FD_DEB}
 
 export BAT_VER='0.11.0'
-wget https://github.com/sharkdp/bat/releases/download/v${BAT_VER}/bat_${BAT_VER}_amd64.deb
-sudo dpkg -i bat_${BAT_VER}_amd64.debi
+export BAT_DEB="bat_${BAT_VER}_amd64.deb"
+wget https://github.com/sharkdp/bat/releases/download/v${BAT_VER}/${BAT_DEB}
+sudo dpkg -i ${BAT_DEB}
 
-# TODO ripgrep
+export RG_VER='11.0.1'
+export RG_DEB="ripgrep_${RG_VER}_amd64.deb"
+wget https://github.com/BurntSushi/ripgrep/releases/download/${RG_VER}/${RG_DEB}
+sudo dpkg -i ${RG_DEB}
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
