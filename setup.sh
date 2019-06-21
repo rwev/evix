@@ -62,10 +62,8 @@ GO111MODULE=on go get github.com/emersion/hydroxide/cmd/hydroxide
 sudo apt-get install qalc
 sudo npm install -g tldr
 
-# TODO entr
-# TODO lsd 
-# workflow
-# TODO tig
+git clone https://github.com/jonas/tig.git
+cd ./tig && make && makeinstall
 
 # data processing
 sudo apt-get install pandoc jq shyaml csvkit pv 
@@ -99,9 +97,6 @@ sudo apt-get install htop iftop neofetch inxi
 
 # networking
 sudo apt-get install wget curl
-
-# media
-sudo apt-get install cmus youtube-dl
 
 # cash
 sudo apt-get install ledger
