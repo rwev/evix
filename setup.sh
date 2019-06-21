@@ -85,6 +85,11 @@ export RG_DEB="ripgrep_${RG_VER}_amd64.deb"
 wget https://github.com/BurntSushi/ripgrep/releases/download/${RG_VER}/${RG_DEB}
 sudo dpkg -i ${RG_DEB}
 
+export LSD_VER='0.15.1'
+export LSD_DEB="lsd_${LSD_VER}_amd64.deb"
+https://github.com/Peltoche/lsd/releases/download/${LSD_VER}/${LSD_DEB}
+sudo dpkg -i ${LSD_DEB}
+
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
