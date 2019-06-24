@@ -9,7 +9,7 @@ set net_inc=5
 
 set abort_nosubject=yes
 
-set editor="vim"
+set editor="$EDITOR"
 
 set include=ask-yes
 set postpone=ask-yes

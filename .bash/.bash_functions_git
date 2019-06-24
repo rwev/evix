@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+function _git_repo_name() {
+        echo $(
+                cd ${1}
+                basename $(git rev-parse --show-toplevel)
+        )
+}
+
+function makedot() {
+        echo "Copying files in git repository $(_git_repo_name $1) at $1 to $HOME"
+        (
+                cd $1
+                git ls-files
+        ) |
+                while read f; do {
+                        ORIG="${1}/${f}"
+                        DEST="${HOME}/${f}"
+                        DEST_DIR=$(dirname $DEST)
+                        if ! [[ -d $DEST_DIR ]]; then
+                                {
+                                        mkdir -p $DEST_DIR
+                                }
+                        fi
+                        cp -r $ORIG $DEST
+                        echo "Copied $ORIG to $DEST"
+                }; done
+}
+
+function takedot() {
+        echo "Copying files in git repository $(_git_repo_name $1) at $1 from $HOME to $1"
+        (
+                cd $1
+                git ls-files
+        ) |
+                while read f; do {
+                        ORIG="${HOME}/${f}"
+                        DEST="${1}/${f}"
+                        if [ -f $ORIG ]; then {
+                                cp -r $ORIG $DEST
+                                echo "Copied $ORIG to $DEST"
+                        }; else
+                                echo "$ORIG not found."
+                        fi
+                }; done
+}

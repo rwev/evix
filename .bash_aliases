@@ -11,14 +11,18 @@ alias ls='lsd'
 alias lynx='lynx -cfg=~/.lynxrc'
 alias lynxd='lynx -dump -stdin'
 
-alias gitc="git commit -a -m"
-alias gits="git status"
-alias gitd="git diff"
-alias gitf="git ls-files"
-alias gitconf="vim ./.git/config"
+alias gitc='git commit -a -m'
+alias gits='git status'
+alias gitp='git pull'
+alias gitd='git diff'
+alias gitf='git ls-files'
+alias gitconf='$EDITOR ./.git/config'
+
+alias gitgconf='$EDITOR ~/.gitconfig'
+alias gitgcreds='$EDITOR ~/.git-credentials'
 
 alias grepnocom="grep -v '^$\|^\s*\#'"
-        alias grepnums='grep --line-number --color=auto'
+alias grepnums='grep --line-number --color=auto'
 
 alias weather='curl wttr.in'
 alias cal='calcurse'
