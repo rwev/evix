@@ -18,8 +18,11 @@ alias gitd='git diff'
 alias gitf='git ls-files'
 alias gitconf='$EDITOR ./.git/config'
 
-alias gitgconf='$EDITOR ~/.gitconfig'
-alias gitgcreds='$EDITOR ~/.git-credentials'
+alias gitgconf="$EDITOR ${HOME}/.gitconfig"
+alias gitgcreds="$EDITOR ${HOME}/.git-credentials"
+
+alias ranger="ranger --confdir=${HOME}/.ranger"
+alias r='ranger'
 
 alias grepnocom="grep -v '^$\|^\s*\#'"
 alias grepnums='grep --line-number --color=auto'
