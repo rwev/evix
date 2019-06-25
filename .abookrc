@@ -1,0 +1,28 @@
+field birthday = Birthday, date
+field alias = Alias, string
+field address_lines = Address, list
+
+view CONTACT = name, mobile, email
+view ADDRESS = address_lines, city, state, zip, country
+view PHONE = mobile, phone, workphone
+view DATES = birthday, anniversary
+view WEB = url, alias
+
+set preserve_fields=all
+set autosave=true
+
+set index_format=" {name:25} {mobile:25} {email:50} "
+set show_all_emails=false
+
+set mutt_command=mutt
+set mutt_return_all_emails=true
+
+set print_command=lpr
+
+set www_command=lynx
+
+set address_style=us
+
+set add_email_prevent_duplicates=false
+
+set sort_field=name

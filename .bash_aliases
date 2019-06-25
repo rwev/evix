@@ -11,6 +11,8 @@ alias ls='lsd'
 alias lynx='lynx -cfg=~/.lynxrc'
 alias lynxd='lynx -dump -stdin'
 
+alias abook='abook --config ~/.abookrc'
+
 alias gitc='git commit -a -m'
 alias gits='git status'
 alias gitp='git pull'
