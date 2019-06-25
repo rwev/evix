@@ -1,5 +1,5 @@
 #!/usr/env/bin bash
 
-source ./bashrc
+source ./.bashrc
 
 export PATH="$HOME/.cargo/bin:$PATH"

@@ -2,7 +2,7 @@
 
 function sitedl() {
         if [ "$#" -eq "0" ]; then {
-                echo "USAGE: curlrecur <URL> <DIR>"
+                echo "USAGE: sitedl <URL> <DIR>"
                 exit 0
         }; fi
 
@@ -22,8 +22,9 @@ function sitedl() {
         curl -s ${1} |
                 grep "HREF" |
                 awk -F '"' '{print $2}' |
+                cut -f1 -d"#" |
+                uniq -u |
                 while read href; do {
-                        # TODO skip request to duplicate effective URLs
                         curl -fLo ${2}/${href} "$(dirname ${1})/${href}" -s -w '%{url_effective}\n'
                 }; done
 

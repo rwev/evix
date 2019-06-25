@@ -22,7 +22,7 @@ alias gitgconf="$EDITOR ${HOME}/.gitconfig"
 alias gitgcreds="$EDITOR ${HOME}/.git-credentials"
 
 alias ranger="ranger --confdir=${HOME}/.ranger"
-alias r='ranger'
+alias rd='ranger'
 
 alias grepnocom="grep -v '^$\|^\s*\#'"
 alias grepnums='grep --line-number --color=auto'
@@ -34,6 +34,7 @@ alias diff='diff -u'
 alias cp='cp -v'
 alias mv='mv -v'
 alias rm='rm -v'
+alias rmd='rm -rf'
 
 alias youtube-dl='youtube-dl --output "%(id)s-%(title)s.%(ext)s"'
 alias yta='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --audio-format best'
