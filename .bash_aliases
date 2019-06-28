@@ -32,9 +32,6 @@ alias grepnums='grep --line-number --color=auto'
 alias weather='curl wttr.in'
 alias cal='calcurse'
 
-alias lb='hledger-ui -f ~/.ledger/bus'
-alias lp='hledger-ui -f ~/.ledger/personal'
-
 alias diff='diff -u'
 alias cp='cp -v'
 alias mv='mv -v'
