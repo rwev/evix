@@ -1,10 +1,10 @@
 {
   "journals": {
     "personal": "~/.jrnls/personal.txt",
-    "work": "~/.jrnls/work.txt"
+    "work": "~/.jrnls/work.txt",
     "bus": "~/.jrnls/bus.txt"
   },
-  "editor": "$EDITOR",
+  "editor": "vim",
   "default_minute": 0,
   "encrypt": false,
   "linewrap": 79,
