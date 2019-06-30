@@ -4,9 +4,14 @@ alias apt='sudo apt-get'
 alias up='apt update && apt upgrade'
 
 alias cat='bat'
-# alias find='fd'
+alias find='fd'
 alias grep='rg'
 alias ls='lsd'
+
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 
 alias lynx='lynx -cfg=~/.lynxrc'
 alias lynxd='lynx -dump -stdin'
