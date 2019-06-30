@@ -4,7 +4,7 @@ alias apt='sudo apt-get'
 alias up='apt update && apt upgrade'
 
 alias cat='bat'
-alias find='fd'
+# alias find='fd'
 alias grep='rg'
 alias ls='lsd'
 
