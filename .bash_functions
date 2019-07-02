@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-for f in  ./.bash/.bash_functions_*;
+for f in  ./.bash/functions/*;
 do {
-        source ${f}
-        echo "... sourced ${f} from .bash_functions"
+        source $f
 }
 done

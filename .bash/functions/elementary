@@ -6,11 +6,6 @@ function nordelementary() {
         gsettings set io.elementary.terminal.settings palette '#3B4252:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#88C0D0:#E5E9F0:#4C566A:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#8FBCBB:#ECEFF4'
 }
 
-function nordxresources() {
-        curl -fLo ./nord-xresources https://raw.githubusercontent.com/arcticicestudio/nord-xresources/develop/src/nord
-        xrdb -merge ./nord-xresources
-}
-
 function trimelementary() {
         gsettings set io.elementary.terminal.settings tab-bar-behavior 'Never Show Tabs'
         gsettings set io.elementary.terminal.settings remember-tabs false

@@ -35,9 +35,7 @@ for f in .bash_vars .bash_aliases .bash_functions .zsh_setopts .zsh_zstyles
 do {
         if [ -f $f ]; then {
                 source $f
-                echo "... sourced $f from .zshrc"
-        } else echo "ERROR: unable to source $f, not found"
-fi
+        } fi
 } done
 
 HISTFILE=~/.zsh_history
