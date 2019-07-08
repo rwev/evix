@@ -13,9 +13,10 @@ function washmutt() {
 
 function protonmutt() {
 
+        set -e 
         if ! [ $# -eq 4 ]; then
                 {
-                        echo "USAGE: proton <USER> <PASS> <NAME> <MAIL>"
+                        echo "USAGE: protonmutt <USER> <PASS> <NAME> <MAIL>"
                         exit 1
                 }
         fi

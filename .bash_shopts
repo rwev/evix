@@ -46,3 +46,4 @@ shopt -u compat32
 shopt -u compat40
 shopt -u compat41
 shopt -u compat42
+shopt -s inherit_errexit # failfast - use with 'set -euo pipefail'
