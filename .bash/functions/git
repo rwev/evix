@@ -8,7 +8,6 @@ function _git_repo_name() {
 }
 
 function makedot() {
-        echo "Copying files in git repository $(_git_repo_name $1) at $1 to $HOME"
         (
                 cd $1
                 git ls-files
@@ -23,12 +22,10 @@ function makedot() {
                                 }
                         fi
                         cp -r $ORIG $DEST
-                        echo "Copied $ORIG to $DEST"
                 }; done
 }
 
 function takedot() {
-        echo "Copying files in git repository $(_git_repo_name $1) at $1 from $HOME to $1"
         (
                 cd $1
                 git ls-files
@@ -36,11 +33,10 @@ function takedot() {
                 while read f; do {
                         ORIG="${HOME}/${f}"
                         DEST="${1}/${f}"
-                        if [ -f $ORIG ]; then {
-                                cp -r $ORIG $DEST
-                                echo "Copied $ORIG to $DEST"
-                        }; else
-                                echo "$ORIG not found."
+                        if [ -f $ORIG ]; then 
+                                {
+                                        cp -r $ORIG $DEST
+                                }
                         fi
                 }; done
 }

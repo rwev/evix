@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
 function filec() {
-        echo "Copying $1 to clipboard"
         cat $1 | xclip
 }
 function filev() {
-        echo "Pasting clipboard to file $1"
         xclip -o >$1
 }
 

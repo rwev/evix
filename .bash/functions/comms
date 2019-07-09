@@ -3,17 +3,14 @@
 muttfile=~/.muttrc
 
 function washmutt() {
-        echo "Cleaning personal credentials from ${muttfile}..."
-
+        set -o xtrace
         for field in 'smtp_url' 'folder' 'realname' 'from' 'spoolfile'; do
                 sed -i "/${field}/d" ${muttfile}
         done
-        echo "... done."
 }
 
 function protonmutt() {
-
-        set -e 
+        set -eo xtrace 
         if ! [ $# -eq 4 ]; then
                 {
                         echo "USAGE: proton <USER> <PASS> <NAME> <MAIL>"
@@ -21,27 +18,17 @@ function protonmutt() {
                 }
         fi
 
-        echo "USER: $1"
-        echo "PASS: $2"
-        echo "NAME: $3"
-        echo "MAIL: $4"
-
-        echo "Logging into ProtonMail with user <${1}> and pass <${2}>..."
-        echo "Authorizing over Hydroxide Bridge..."
-
         bridge_out=$(echo ${2} | hydroxide auth ${1})
         bridge_pass=$(echo $bridge_out | awk 'NF>1{print $NF}')
 
-        echo "... got Hydroxide Bridge password ${bridge_pass}."
-
         washmutt
+
         echo "set folder=\"imap://${1}:${bridge_pass}@127.0.0.1:1143\"" >>${muttfile}
         echo "set smtp_url=\"smtp://${1}:${bridge_pass}@127.0.0.1:1025\"" >>${muttfile}
         echo "set spoolfile=\"+INBOX\"" >>${muttfile}
         echo "set realname=${3}" >>${muttfile}
         echo "set from=${4}" >>${muttfile}
 
-        echo "Starting Hydroxide SMTP and IMAP servers..."
         hydroxide smtp &
         hydroxide imap &
 
