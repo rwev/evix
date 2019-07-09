@@ -16,7 +16,7 @@ alias lt='ls --tree'
 alias lynx='lynx -cfg=~/.lynxrc'
 alias lynxd='lynx -dump -stdin'
 
-alias abook='abook --config ~/.abookrc'
+alias abook='abook --config ~/.abookrc --datafile ~/.abook/addressbook'
 
 alias gitc='git commit -a -m'
 alias gits='git status'
