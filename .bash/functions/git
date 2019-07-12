@@ -7,7 +7,7 @@ function _git_repo_name() {
         )
 }
 
-function makedot() {
+function git-make-dot() {
         (
                 cd $1
                 git ls-files
@@ -25,7 +25,7 @@ function makedot() {
                 }; done
 }
 
-function takedot() {
+function git-take-dot() {
         (
                 cd $1
                 git ls-files
@@ -39,4 +39,30 @@ function takedot() {
                                 }
                         fi
                 }; done
+}
+
+
+function git-rewrite-author() {
+
+        if [ "$#" -ne 3 ]; then { 
+                echo "USAGE: git-rewrite-author <OLD_EMAIL> <CORRECT_NAME>
+                <CORRECT_EMAIL>"
+                exit 1
+        } fi
+
+        git filter-branch --env-filter "
+        OLD_EMAIL=${1}
+        CORRECT_NAME=${2}
+        CORRECT_EMAIL=${3}
+        if [  =  ]
+        then
+        export GIT_COMMITTER_NAME=
+        export GIT_COMMITTER_EMAIL=
+        fi
+        if [  =  ]
+        then
+        export GIT_AUTHOR_NAME=
+        export GIT_AUTHOR_EMAIL=
+        fi
+        " --tag-name-filter cat -- --branches --tags
 }
