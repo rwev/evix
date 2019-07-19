@@ -18,7 +18,7 @@ set sidebar_visible = yes
 set sidebar_width   = 38
 
 # TODO
-# set signature        = ~/.mutt/sig # end of email signature
+# set signature        = ~/.mutt/sig # end of email signature # add fortune?
 
 #set mbox_type = Maildir  
 
