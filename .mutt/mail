@@ -17,8 +17,7 @@ set header_cache=~/.mutt/cache
 set sidebar_visible = yes
 set sidebar_width   = 38
 
-# TODO
-# set signature        = ~/.mutt/sig # end of email signature # add fortune?
+set signature = ~/.mutt/sig
 
 #set mbox_type = Maildir  
 
