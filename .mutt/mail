@@ -1,0 +1,25 @@
+# set record="+Sent" 
+set postponed="+Drafts"
+unset record # sent mail automatically recorded
+
+# TODO specify mailboxes OR "set imap_check_subscribed"
+#mailboxes +INBOX \
+#          +Sent \
+#          +Drafts
+
+
+# TODO Maildir: does this work?
+set mbox_type=Maildir
+set folder=~/mail
+set spoolfile=+/
+set header_cache=~/.mutt/cache
+
+set sidebar_visible = yes
+set sidebar_width   = 38
+
+# TODO
+# set signature        = ~/.mutt/sig # end of email signature
+
+#set mbox_type = Maildir  
+
+

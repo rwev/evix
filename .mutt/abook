@@ -1,0 +1,3 @@
+set query_command="abook --mutt-query '%s'"
+bind editor <tab> complete-query
+macro index,pager A "|abook --add-email-quiet\n" 'add sender to abook'
