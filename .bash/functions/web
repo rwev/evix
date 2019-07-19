@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 function sitedl() {
+        set -o xtrace 
+
         if [ "$#" -eq "0" ]; then {
                 echo "USAGE: sitedl <URL> <DIR>"
-                exit 0
+                return
         }; fi
 
         # TODO add recursive depth option
-        echo "Downloading ${1} recursively to ${2}..."
-
         if [[ -d $2 ]]; then {
                 echo "ERROR: Directory $2 already exists."
                 exit 0
@@ -28,7 +28,6 @@ function sitedl() {
                         curl -fLo ${2}/${href} "$(dirname ${1})/${href}" -s -w '%{url_effective}\n'
                 }; done
 
-        echo "... done."
         lynx ${2}/index.html
 }
 

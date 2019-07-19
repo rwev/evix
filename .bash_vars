@@ -13,7 +13,7 @@ export ANDROID_AVD_HOME=/root/.android/avd/
 export PATH=$PATH:/usr/gradle/gradle-5.4/bin/
 export PATH=$PATH:~/Android/Sdk/tools/bin/:~/Android/Sdk/platform-tools/bin/
 
-export PATH=${PATH}:~/.go/go/bin/
+export PATH=${PATH}:~/go/bin/
 export PATH=${PATH}:~/.cargo/bin/
 
 HISTCONTROL=ignore

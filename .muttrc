@@ -18,43 +18,40 @@ set print=ask-yes
 auto_view text/html
 alternative_order text/plain text/enriched text/html
 
-# set record="+Sent"
-# set postponed="+Drafts"
+set record="+Sent"
+set postponed="+Drafts"
+# unset record 
 
-# BELOW ADDED 7/9/2019 - UNTESTED
-
-unset record 
+#mailboxes +INBOX \
+#          +Sent \
+#          +Drafts
 
 set sidebar_visible = yes
-set sidebar_width   = 24
+set sidebar_width   = 38
 
 # TODO
-set signature        = ~/.mutt/sig          
+# set signature        = ~/.mutt/sig          
 
-set mbox_type = Maildir  
+#set mbox_type = Maildir  
+
 set timeout = 3          
+
 unset move              
 unset mark_old           
+
 set beep_new            
+
 set pipe_decode         
+
 set thorough_search    
 
 set status_chars  = " *%A"
 set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 
-ignore *                                
-unignore from: to: cc: date: subject:   
-unhdr_order *                           
-hdr_order from: to: cc: date: subject:  
-
-# TODO mailboxes
-set spoolfile = "/INBOX"
-set postponed = "/drafts"
-set mbox = "/archive"
-
-mailboxes +/INBOX \
-          +/archive \
-          +/drafts
+ignore *
+unignore from: to: cc: date: subject:
+unhdr_order *
+hdr_order from: to: cc: date: subject:
 
 set date_format = "%m/%d"
 set index_format = "[%Z]  %D  %-20.20F  %s"
@@ -94,7 +91,7 @@ bind pager R  group-reply
 
 bind attach <return> view-mailcap
 
-set envelope_from                    
+set envelope_from
 set sig_dashes                       
 set edit_headers                     
 set fast_reply                      

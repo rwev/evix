@@ -47,7 +47,7 @@ function git-rewrite-author() {
         if [ "$#" -ne 3 ]; then { 
                 echo "USAGE: git-rewrite-author <OLD_EMAIL> <CORRECT_NAME>
                 <CORRECT_EMAIL>"
-                exit 1
+                return
         } fi
 
 

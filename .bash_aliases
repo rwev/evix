@@ -13,10 +13,13 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
+
+alias mutt='mutt -F ~/.muttrc'
 alias lynx='lynx -cfg=~/.lynxrc'
 alias lynxd='lynx -dump -stdin'
 
 alias abook='abook --config ~/.abookrc --datafile ~/.abook/addressbook'
+
 
 alias gitc='git commit -a -m'
 alias gits='git status'

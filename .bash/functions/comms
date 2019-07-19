@@ -10,15 +10,20 @@ function washmutt() {
 }
 
 function protonmutt() {
-        set -eo xtrace 
-        if ! [ $# -eq 4 ]; then
+        
+        if ! [ $# -eq 3 ]; then
                 {
-                        echo "USAGE: proton <USER> <PASS> <NAME> <MAIL>"
-                        exit 1
+                        echo "USAGE: proton <USER> <NAME> <MAIL>"
+                        return
                 }
         fi
 
-        bridge_out=$(echo ${2} | hydroxide auth ${1})
+        echo -n "Password:"
+        read -s pass
+
+        set -o xtrace
+
+        bridge_out=$(echo ${pass} | hydroxide auth ${1})
         bridge_pass=$(echo $bridge_out | awk 'NF>1{print $NF}')
 
         washmutt
@@ -26,8 +31,8 @@ function protonmutt() {
         echo "set folder=\"imap://${1}:${bridge_pass}@127.0.0.1:1143\"" >>${muttfile}
         echo "set smtp_url=\"smtp://${1}:${bridge_pass}@127.0.0.1:1025\"" >>${muttfile}
         echo "set spoolfile=\"+INBOX\"" >>${muttfile}
-        echo "set realname=${3}" >>${muttfile}
-        echo "set from=${4}" >>${muttfile}
+        echo "set realname=\"${2}\"" >>${muttfile}
+        echo "set from=\"${3}\"" >>${muttfile}
 
         hydroxide smtp &
         hydroxide imap &
