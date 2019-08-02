@@ -1,0 +1,15 @@
+#!/usr/env/bin bash
+
+function wttrstream() {
+
+        URL='https://wttr.in/?0AFnQ'
+        UPDATE_INTERVAL_SECS=60
+        
+        while :
+        do 
+                clear # reset
+                curl $URL
+                echo "updated $(date +"%T")"
+                sleep $UPDATE_INTERVAL_SECS
+        done
+}
