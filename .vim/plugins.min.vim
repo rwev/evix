@@ -36,7 +36,7 @@ let g:calendar_date_endian='big' " YYYY/MM/DD
 let g:calendar_date_separator='/'
 let g:calendar_cyclic_view=1
 let g:calendar_task=1
-let g:calendar_cache_directory='~/.calendar'
+let g:calendar_cache_directory=expand('~/.calendar')
 let g:calendar_views =[
  \ 'year', 'month', 'week', 'weekday',
  \ 'day_7', 'day_6', 'day_5', 'day_4',
