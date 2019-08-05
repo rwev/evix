@@ -17,18 +17,14 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 nnoremap <C-N> :GFiles<CR>
 nnoremap <C-P> :Rg<CR>
 
-Plug 'reedes/vim-pencil' " TODO check out other writing plugins from reedes
-
 Plug 'farmergreg/vim-lastplace'
 
 Plug 'nathanaelkane/vim-indent-guides'
 
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-repeat'
-
 Plug 'godlygeek/tabular'
+
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 
 Plug 'jiangmiao/auto-pairs'
 
@@ -49,8 +45,5 @@ let g:calendar_views =[
  \ ]
 
 let g:calendar_task_delete=1
-
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
 
 call plug#end()
