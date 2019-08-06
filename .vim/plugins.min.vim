@@ -46,4 +46,6 @@ let g:calendar_views =[
 
 let g:calendar_task_delete=1
 
+Plug 'junegunn/goyo.vim'
+
 call plug#end()

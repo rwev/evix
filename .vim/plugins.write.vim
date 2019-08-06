@@ -21,7 +21,6 @@ augroup END
 
 Plug 'tommcdo/vim-exchange'
 
-Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
 Plug 'xolox/vim-misc'

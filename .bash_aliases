@@ -20,7 +20,9 @@ alias lynxd='lynx -dump -stdin'
 alias abook='abook --config ~/.abookrc --datafile ~/.abook/addressbook'
 
 alias v='vim'
-alias vd='v ./'
+alias vd='vim ./'
+alias vcal='vim -c "Calendar"' # -c "Goyo"'
+alias vnote='vim -c "Note" -c "Goyo"'
 
 alias gita='git add .'
 alias gitc='git commit -a -m'
