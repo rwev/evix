@@ -25,7 +25,7 @@ Plug 'junegunn/limelight.vim'
 
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
-let g:notes_directories=['~/.notes']
+let g:notes_directories=[expand('~/.notes')]
 " let g:notes_suffix='.md'
 
 call plug#end()

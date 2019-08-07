@@ -14,8 +14,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 
-nnoremap <C-N> :GFiles<CR>
-nnoremap <C-P> :Rg<CR>
+nnoremap <C-N> :Files<CR>
+nnoremap <C-P> :Ag<CR>
 
 Plug 'farmergreg/vim-lastplace'
 
@@ -36,7 +36,7 @@ let g:calendar_date_endian='big' " YYYY/MM/DD
 let g:calendar_date_separator='/'
 let g:calendar_cyclic_view=1
 let g:calendar_task=1
-let g:calendar_cache_directory=expand('~/.calendar')
+let g:calendar_task_delete=1
 let g:calendar_views =[
  \ 'year', 'month', 'week', 'weekday',
  \ 'day_7', 'day_6', 'day_5', 'day_4',
@@ -44,7 +44,7 @@ let g:calendar_views =[
  \ 'clock', 'event', 'agenda' 
  \ ]
 
-let g:calendar_task_delete=1
+let g:calendar_cache_directory=expand('~/.calendar')
 
 Plug 'junegunn/goyo.vim'
 
