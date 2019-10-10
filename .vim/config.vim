@@ -79,8 +79,10 @@ set whichwrap+=<,>,h,l,[,]
 
 set nostartofline
 set ffs=unix,dos,mac
-set virtualedit=block " TODO what "
-set formatoptions+=tcroqnjl21 " TODO what "
+" TODO what "
+set virtualedit=block 
+" TODO what "
+set formatoptions+=tcroqnjl21 
 set textwidth=80
 set colorcolumn=+1
 set showtabline=2
@@ -96,7 +98,7 @@ set langmenu=en
 set encoding=utf8
 set fileencoding=utf-8
 
-" TODO what
+" TODO what "
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
