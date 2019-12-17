@@ -31,7 +31,7 @@ jsontools
 ENABLE_CORRECTION="true"
 
 # source compatible bash + zsh-specific files
-for f in .bash_vars .bash_aliases .bash_functions .zsh_setopts .zsh_zstyles
+for f in ~/.bash_vars ~/.bash_aliases ~/.bash_functions ~/.zsh_setopts ~/.zsh_zstyles
 do {
         if [ -f $f ]; then {
                 source $f
