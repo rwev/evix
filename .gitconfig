@@ -1,0 +1,36 @@
+[core]
+	preloadindex = true
+	editor = vim
+	autocrlf = input
+[user]
+	name = "rwev"
+	email = "rwev@rwev.dev"
+[push]
+	default = simple
+[help]
+	autocorrect = 1
+[alias]
+	last = cat-file commit HEAD
+	commitv = commit -v
+	dmerge = merge --no-ff
+	up = pull --rebase=preserve --autostash --all
+	unstage = reset HEAD --
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	pager = true
+	status = auto
+[log]
+	date = local
+[init]
+	templatedir = ~/.git-templates
+[status]
+	submodulesummary = true
+[pull]
+	rebase = preserve
+[rerere]
+	enabled = true
+	autoupdate = true
+[credential]
+	helper = cache

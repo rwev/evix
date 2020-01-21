@@ -1,24 +1,16 @@
 #!/usr/env/bin bash
 
+export SHELL=zsh
 export EDITOR=vim
 export BROWSER=lynx
 export WWW_HOME="https://duckduckgo.com"
-
-export JDK_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/
-
-export ANDROID_HOME=~/Android/Sdk/
-export ANDROID_AVD_HOME=/root/.android/avd/
-
-export PATH=$PATH:/usr/gradle/gradle-5.4/bin/
-export PATH=$PATH:~/Android/Sdk/tools/bin/:~/Android/Sdk/platform-tools/bin/
 
 export PATH=${PATH}:~/.local/bin/
 export PATH=${PATH}:~/go/bin/
 export PATH=${PATH}:~/.cargo/bin/
 
-HISTCONTROL=ignore
-HISTSIZE=1000
-HISTFILESIZE=2000
+export HISTCONTROL=ignore
+export HISTSIZE=1000
+export HISTFILESIZE=2000
 
-HISTFILE=~/.bash_history
+export HISTFILE=~/.bash_history
