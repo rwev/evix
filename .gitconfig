@@ -33,4 +33,4 @@
 	enabled = true
 	autoupdate = true
 [credential]
-	helper = cache
+	helper = store
