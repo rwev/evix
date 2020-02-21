@@ -1,36 +1,4 @@
 #!/usr/bin/env bash
-
-function sitedl() {
-        set -o xtrace 
-
-        if [ "$#" -eq "0" ]; then {
-                echo "USAGE: sitedl <URL> <DIR>"
-                return
-        }; fi
-
-        # TODO add recursive depth option
-        if [[ -d $2 ]]; then {
-                echo "ERROR: Directory $2 already exists."
-                exit 0
-        }; fi
-
-        if ! curl -fLo ${2}/index.html --create-dirs ${1} -s; then {
-                echo "ERROR: GET request to $1 returns an error code."
-                exit 0
-        }; fi
-
-        curl -s ${1} |
-                grep "HREF" |
-                awk -F '"' '{print $2}' |
-                cut -f1 -d"#" |
-                uniq -u |
-                while read href; do {
-                        curl -fLo ${2}/${href} "$(dirname ${1})/${href}" -s -w '%{url_effective}\n'
-                }; done
-
-        lynx ${2}/index.html
-}
-
 function pubip() {
         echo $(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1 -d'/')
 }
