@@ -43,10 +43,10 @@ HISTFILE=~/.zsh_history
 ZSH_THEME=""
 ZSH=~/.oh-my-zsh
 
+ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 
 autoload -U promptinit; promptinit
 prompt pure
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

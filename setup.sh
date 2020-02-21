@@ -13,3 +13,4 @@ sudo apt-get install pandoc jq shyaml csvkit pv
 sudo python3.6 -m pip install speedtest-cli
 sudo apt-get install htop iftop neofetch inxi
 sudo apt-get install wget curl
+~/.fzf/install
