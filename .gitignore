@@ -1,6 +1,1 @@
-.newsbeuter/cache.db
-.newsbeuter/history.cmdline
-.newsbeuter/history.search
-
-.mutt/certificates
-.mutt/muttrc.private
+*
