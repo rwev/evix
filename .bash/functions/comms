@@ -11,20 +11,27 @@ function washmutt() {
 
 function protonmutt() {
         
-        if ! [ $# -eq 3 ]; then
+        if ! [ $# -ge 3 ]; then
                 {
-                        echo "USAGE: proton <USER> <NAME> <MAIL>"
+                        echo "USAGE: protonmutt <PROTONMAIL_USERNAME> <MUTT_REALNAME> <MUTT_FROM>
+                        <PROTONMAIL_PASSWORD>"
                         return
                 }
         fi
 
-        echo -n "Password:"
-        read -s pass
+        pass=$4
+        if ! [ -n "$4" ]; then
+                {
+                echo -n "Password:"
+                read -s pass
+                }
+        fi
+
 
         set -o xtrace
 
-        bridge_out=$(echo ${pass} | hydroxide auth ${1})
-        bridge_pass=$(echo $bridge_out | awk 'NF>1{print $NF}')
+        bridge_out=$(hydroxide auth ${1} <<< printf ${pass})
+        bridge_pass=$(echo ${bridge_out} | awk 'NF>1{print $NF}')
 
         washmutt
 
