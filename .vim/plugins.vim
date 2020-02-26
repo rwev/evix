@@ -142,4 +142,6 @@ Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Valloric/MatchTagAlways'
 
+Plug 'gorodinskiy/vim-coloresque'
+
 call plug#end()
