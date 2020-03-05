@@ -32,7 +32,7 @@ alias gitco='git checkout'
 alias gitm='git merge'
 alias gitr='git reset'
 alias gitconf='$EDITOR ./.git/config'
-
+alias gitdat='git --git-dir=.git.dat'
 alias gitgconf="$EDITOR ${HOME}/.gitconfig"
 alias gitgcreds="$EDITOR ${HOME}/.git-credentials"
 
