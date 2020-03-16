@@ -55,3 +55,4 @@ alias rmd='rm -rf'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 alias pfindnkill="pgrep %1 | pkill"
+alias alacritty-fullscreen-toggle="wmctrl -r 'Alacritty' -b toggle,fullscreen"
