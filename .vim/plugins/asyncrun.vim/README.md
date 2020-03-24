@@ -7,6 +7,7 @@ This plugin takes the advantage of new apis in Vim 8 (and NeoVim) to enable you 
 - Output are displayed in the quickfix window, errors are matched with `errorformat`.
 - You can explore the error output immediately or keep working in vim while executing.
 - Ring the bell or play a sound to notify you job finished while you're focusing on editing.
+- Customizable runners and command modifiers brings you dark power of asyncrun.
 - Fast and lightweight, just a single self-contained `asyncrun.vim` source file.  
 - Provide corresponding user experience in vim, neovim, gvim and macvim.
 
@@ -30,7 +31,7 @@ Copy `asyncrun.vim` to your `~/.vim/plugin` or use Vundle to install it from `sk
 
 # Example
 
-![](doc/screenshot.gif)
+![](https://skywind3000.github.io/images/p/asyncrun/screenshot.gif)
 
 Remember to open vim's quickfix window by `:copen` (or setting  `g:asyncrun_open`) before invoking `AsyncRun`, otherwise, you will not see any output.
 
@@ -49,8 +50,11 @@ Remember to open vim's quickfix window by `:copen` (or setting  `g:asyncrun_open
     - [Project Root](#project-root)
     - [Running modes](#running-modes)
     - [Internal Terminal](#internal-terminal)
+    - [Terminal Name](#terminal-name)
     - [Quickfix window](#quickfix-window)
     - [Range support](#range-support)
+    - [Customize Runner](#customize-runner)
+    - [Command Modifier](#command-modifier)
     - [Requirements](#requirements)
     - [Cooperate with vim-fugitive:](#cooperate-with-vim-fugitive)
 - [Language Tips](#language-tips)
@@ -169,19 +173,20 @@ There can be some options before your `[cmd]`:
 | `-mode=?` | "async" | specify how to run the command as `-mode=?`, available modes are `"async"` (default), `"bang"` (with `!` command) and `"terminal"` (in internal terminal), see [running modes](#running-modes) for details. |
 | `-cwd=?` | `unset` | initial directory (use current directory if unset), for example use `-cwd=<root>` to run commands in [project root directory](#project-root), or `-cwd=$(VIM_FILEDIR)` to run commands in current buffer's parent directory. |
 | `-save=?` | 0 | use `-save=1` to save current file, `-save=2` to save all modified files before executing. |
-| `-program=?` | `unset` | set to `make` to use `&makeprg`, `grep` to use `&grepprt` and `wsl` to execute commands in WSL (windows 10) |
+| `-program=?` | `unset` | set to `make` to use `&makeprg`, `grep` to use `&grepprt` and `wsl` to execute commands in WSL (windows 10), see [command modifiers](#command-modifier). |
 | `-post=?` | `unset` | vimscript to exec after job finished, spaces **must** be escaped to '\ ' |
 | `-auto=?` | `unset` | event name to trigger `QuickFixCmdPre`/`QuickFixCmdPost` [name] autocmd. |
 | `-raw` | `unset` | use raw output if provided, and `&errorformat` will be ignored. |
 | `-strip` | `unset` | remove the heading/trailing messages if provided (omit command and "[Finished in ...]" message). |
-| `-pos=?` | "bottom" | When using internal terminal with `-mode=term`, `-pos` is used to specify where to split the terminal window, it can be one of `"tab"`, `"curwin"`, `"top"`, `"bottom"`, `"left"`, `"right"` and `"external"`. |
+| `-pos=?` | "bottom" | When using internal terminal with `-mode=term`, `-pos` is used to specify where to split the terminal window, it can be one of `"tab"`, `"curwin"`, `"top"`, `"bottom"`, `"left"`, `"right"` and `"external"`. And you can [customize new runners](#customize-runner) and pass runner's name to `-pos` option. |
 | `-rows=num` | 0 | When using a horizontal split terminal, this value represents the height of terminal window. |
 | `-cols=num` | 0 | When using a vertical split terminal, this value represents the width of terminal window. |
 | `-errorformat=?` | `unset` | errorformat for error matching, if it is unprovided, use current `&errorformat` value. Beware that `%` needs to be escaped into `\%`. |
-| `-focus=?` | 1 | set to `0` to prevent focus changing when working with a split temrinal |
+| `-focus=?` | 1 | set to `0` to prevent focus changing when `-mode=term` |
 | `-hidden=?` | 0 | set to `1` to setup `bufhidden` to `hide` for internal terminal |
+| `-silent` | `unset` | provide `-silent` to prevent open quickfix window (will override `g:asyncrun_open` temporarily) |
 
-All options must start with a minus and position **before** `[cmd]`. Since no shell command  string starts with a minus. So they can be distinguished from shell command easily without any ambiguity. 
+All options must start with a minus and position **before** `[cmd]`. Since no shell command string starts with a minus. So they can be distinguished from shell command easily without any ambiguity. 
 
 Don't worry if you do have a shell command starting with '-', Just put a placeholder `@` before your command to tell asyncrun explicitly: "stop parsing options now, the following string is all my command".
 
@@ -278,7 +283,8 @@ AsyncRun is capable to run commands in Vim/NeoVim's internal terminal with the `
 - `-pos=bottom`: open the terminal below the current window.
 - `-pos=left`: open the terminal on the left side.
 - `-pos=right`: open the terminal on the right side.
-- `-pos=external`: use an external terminal (windows only).
+- `-pos=hide`: don't open a window, run in background.
+- `-pos=external`: use an external terminal (Windows only).
 
 Examples:
 
@@ -290,9 +296,19 @@ Examples:
 :AsyncRun -mode=term -pos=curwin -hidden python "$(VIM_FILEPATH)"
 ```
 
-When using a split (`-pos` is one of `top`, `bottom`, `left` and `right`), AsyncRun will firstly reuse a finished previous terminal window if it exists, if not, AsyncRun will create a new terminal window in given position.
+The `-pos` field accepts an uppercase `TAB`, to create tab on the left of current tab. When using internal terminal in a split window, AsyncRun will firstly reuse a finished previous terminal window if it exists, if not, a new terminal window will be created in given position. Tab based terminal can also be reusable if `-reuse` is provided.
 
-If it is not enough to fit your need, you can [customize runners](https://github.com/skywind3000/asyncrun.vim/wiki/Customize-Runner) as you like.
+Except the quickfix and internal terminal, AsyncRun is capable to run command in another tmux split or a new gnome-terminal window/tab with the advantage of [customizable runners](https://github.com/skywind3000/asyncrun.vim/wiki/Customize-Runner).
+
+### Terminal Name
+
+There can be many commands running in the internal terminal, you can specify a name for each of them and receive it in `g:asyncrun_name`:
+
+```VimL
+:AsyncRun -mode=term -pos=hide -name=123 -post=echo\ g:asyncrun_name  ls -la
+```
+
+When this process finished, script defined in `-post` will be executed and your command name will display by `echo`. Another variable `g:asyncrun_code` stores exit code.
 
 ### Quickfix window
 
@@ -325,6 +341,57 @@ text between line 10-20 will be taken as the stdin of python. code in that range
 
 The visual selection (line-wise) will be taken as stdin.
 
+### Customize Runner
+
+You may want your command run in a tmux split or a new gnome-terminal window, for this reason, AsyncRun allows you create new runners:
+
+```VimL
+function! MyRunner(opts)
+    echo "command to run is: " . a:opts.cmd
+endfunction
+
+let g:asyncrun_runner = get(g:, 'asyncrun_runner', {})
+let g:asyncrun_runner.test = function('MyRunner')
+```
+
+Then try:
+
+```VimL
+:AsyncRun -mode=term -pos=test ls -la $(VIM_FILEDIR)
+```
+
+When `-mode` is `term` and `-pos` can used to represent runner name.
+
+Runner function has only one argument: `opts`, it contains the options extracted from `:AsyncRun` command line, and `opts.cmd` stores current command. 
+
+For examples like `tmux`, `gnome-terminal` and other runners please visit project wiki: [customize runner](https://github.com/skywind3000/asyncrun.vim/wiki/Customize-Runner).
+
+
+### Command Modifier
+
+Command modifiers can be used to change your command before running:
+
+```VimL
+let g:asyncrun_program = get(g:, 'asyncrun_program', {})
+let g:asyncrun_program.nice = { opts -> 'nice -5' . opts.cmd }
+```
+
+When you are using:
+
+```VimL
+:AsyncRun -program=nice ls -la
+```
+
+The command `ls -la` will be changed into `nice -5 ls -la`.
+
+The `-program=msys`, `-program=wsl` are both implemented as a new command modifier it changes command `ls` into:
+
+```
+c:\windows\sysnative\wsl.exe ls
+```
+
+And replace any thing like `$(WSL_FILENAME)` and `$(WSL_FILEPATH)` in your command.
+
 
 ### Requirements
 
@@ -336,7 +403,7 @@ Recommend to use Vim 8.0 or later.
 
 asyncrun.vim can cooperate with `vim-fugitive`, see [here](https://github.com/skywind3000/asyncrun.vim/wiki/Cooperate-with-famous-plugins#fugitive).
 
-![](https://raw.githubusercontent.com/skywind3000/asyncrun.vim/master/doc/cooperate_with_fugitive.gif)
+![](https://skywind3000.github.io/images/p/asyncrun/cooperate_with_fugitive.gif)
 
 
 ## Language Tips
@@ -373,6 +440,11 @@ See: [Cooperate with famous plugins](https://github.com/skywind3000/asyncrun.vim
 
 ## History
 
+- 2.6.2 (2020-03-08): change runner's argument from string to dict.
+- 2.6.0 (2020-03-07): `-post` can be used in terminal mode.
+- 2.5.5 (2020-03-07): "-mode=term -pos=tab" obeys "-focus=0" now.
+- 2.5.3 (2020-03-02): new `-silent` option to prevent open quickfix, add [command modifier](https://github.com/skywind3000/asyncrun.vim/wiki/Command-Modifier).
+- 2.5.0 (2020-02-29): refactor, remove useless codes, new command modifier `g:asyncrun_program`.
 - 2.4.8 (2020-02-21): run with `:execute` if command is starting with colon.
 - 2.4.7 (2020-02-21): new customizable runners by `g:asyncrun_runner`, see [customize runner](https://github.com/skywind3000/asyncrun.vim/wiki/Customize-Runner).
 - 2.4.0 (2020-02-10): fixed internal terminal issue in msys.

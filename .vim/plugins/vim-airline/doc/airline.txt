@@ -568,6 +568,9 @@ vim-capslock <https://github.com/tpope/vim-capslock>
 * enable/disable vim-capslock integration >
   let g:airline#extensions#capslock#enabled = 1
 
+* change vim-capslock symbol >
+  let g:airline#extensions#capslock#symbol = 'CAPS' (default)
+
 -------------------------------------                    *airline-coc*
 coc <https://github.com/neoclide/coc.nvim>
 
@@ -784,6 +787,27 @@ localsearch <https://github.com/mox-mox/localsearch>
 
 * enable/disable localsearch indicator integration >
   let g:airline#extensions#localsearch#enabled = 1
+
+-------------------------------------                    *airline-lsp*
+lsp <https://github.com/prabirshrestha/vim-lsp>
+
+* enable/disable lsp integration >
+  let g:airline#extensions#lsp#enabled = 1
+
+* lsp error_symbol >
+  let airline#extensions#lsp#error_symbol = 'E:'
+<
+* lsp warning >
+  let airline#extensions#lsp#warning_symbol = 'W:'
+
+* lsp show_line_numbers >
+  let airline#extensions#lsp#show_line_numbers = 1
+<
+* lsp open_lnum_symbol >
+  let airline#extensions#lsp#open_lnum_symbol = '(L'
+<
+* lsp close_lnum_symbol >
+  let airline#extensions#lsp#close_lnum_symbol = ')'
 
 -------------------------------------                    *airline-neomake*
 neomake <https://github.com/neomake/neomake>
@@ -1366,7 +1390,7 @@ vim-windowswap <https://github.com/wesQ3/vim-windowswap>
   " The default value matches filetypes typically used for documentation
   " such as markdown and help files. Default is:
   let g:airline#extensions#wordcount#filetypes =
-    \ ['asciidoc', 'help', 'mail', 'markdown', 'org', 'rst', 'tex', 'text'])
+    \ ['asciidoc', 'help', 'mail', 'markdown', 'org', 'plaintex', 'rst', 'tex', 'text'])
   " Use ['all'] to enable for all filetypes.
 
 * defines the name of a formatter for word count will be displayed: >
@@ -1551,10 +1575,10 @@ The following list of parts are predefined by vim-airline.
 And the following are defined for their respective extensions:
 
 `ale_error_count` `ale_warning_count` `branch` `eclim` `hunks`
-`languageclient_error_count` `languageclient_warning_count`
-`neomake_error_count` `neomake_warning_count` `obsession` `syntastic-warn`
-`syntastic-err` `tagbar` `whitespace` `windowswap` `ycm_error_count`
-`ycm_warning_count`
+`languageclient_error_count` `languageclient_warning_count` `lsp_error_count`
+`lsp_warning_count` `neomake_error_count` `neomake_warning_count` `obsession`
+`syntastic-warn` `syntastic-err` `tagbar` `whitespace` `windowswap`
+`ycm_error_count` `ycm_warning_count`
 
 -------------------------------------                      *airline-accents*
 Accents can be defined on any part, like so: >

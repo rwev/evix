@@ -689,6 +689,7 @@ b:ale_erlang_dialyzer_rebar3_profile	ale-erlang.txt	/*b:ale_erlang_dialyzer_reba
 b:ale_erlang_erlc_options	ale-erlang.txt	/*b:ale_erlang_erlc_options*
 b:ale_erlang_syntaxerl_executable	ale-erlang.txt	/*b:ale_erlang_syntaxerl_executable*
 b:ale_eruby_ruumba_executable	ale-eruby.txt	/*b:ale_eruby_ruumba_executable*
+b:ale_exclude_highlights	ale.txt	/*b:ale_exclude_highlights*
 b:ale_fix_on_save	ale.txt	/*b:ale_fix_on_save*
 b:ale_fix_on_save_ignore	ale.txt	/*b:ale_fix_on_save_ignore*
 b:ale_fixers	ale.txt	/*b:ale_fixers*
@@ -1286,6 +1287,7 @@ g:ale_erlang_dialyzer_rebar3_profile	ale-erlang.txt	/*g:ale_erlang_dialyzer_reba
 g:ale_erlang_erlc_options	ale-erlang.txt	/*g:ale_erlang_erlc_options*
 g:ale_erlang_syntaxerl_executable	ale-erlang.txt	/*g:ale_erlang_syntaxerl_executable*
 g:ale_eruby_ruumba_executable	ale-eruby.txt	/*g:ale_eruby_ruumba_executable*
+g:ale_exclude_highlights	ale.txt	/*g:ale_exclude_highlights*
 g:ale_fix_on_save	ale.txt	/*g:ale_fix_on_save*
 g:ale_fix_on_save_ignore	ale.txt	/*g:ale_fix_on_save_ignore*
 g:ale_fixers	ale.txt	/*g:ale_fixers*

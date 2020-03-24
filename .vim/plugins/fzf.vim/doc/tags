@@ -36,6 +36,7 @@ fzf-vim-hide-statusline	fzf-vim.txt	/*fzf-vim-hide-statusline*
 fzf-vim-installation	fzf-vim.txt	/*fzf-vim-installation*
 fzf-vim-license	fzf-vim.txt	/*fzf-vim-license*
 fzf-vim-mappings	fzf-vim.txt	/*fzf-vim-mappings*
+fzf-vim-preview-window	fzf-vim.txt	/*fzf-vim-preview-window*
 fzf-vim-rationale	fzf-vim.txt	/*fzf-vim-rationale*
 fzf-vim-reducer-example	fzf-vim.txt	/*fzf-vim-reducer-example*
 fzf-vim-status-line-of-terminal-buffer	fzf-vim.txt	/*fzf-vim-status-line-of-terminal-buffer*
@@ -48,4 +49,5 @@ g:fzf_buffers_jump	fzf-vim.txt	/*g:fzf_buffers_jump*
 g:fzf_command_prefix	fzf-vim.txt	/*g:fzf_command_prefix*
 g:fzf_commands_expect	fzf-vim.txt	/*g:fzf_commands_expect*
 g:fzf_commits_log_options	fzf-vim.txt	/*g:fzf_commits_log_options*
+g:fzf_preview_window	fzf-vim.txt	/*g:fzf_preview_window*
 g:fzf_tags_command	fzf-vim.txt	/*g:fzf_tags_command*

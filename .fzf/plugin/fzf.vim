@@ -642,9 +642,11 @@ function! s:calc_size(max, val, dict)
   endif
 
   let opts = $FZF_DEFAULT_OPTS.' '.s:evaluate_opts(get(a:dict, 'options', ''))
-  let margin = stridx(opts, '--inline-info') > stridx(opts, '--no-inline-info') ? 1 : 2
+  let margin = match(opts, '--inline-info\|--info[^-]\{-}inline') > match(opts, '--no-inline-info\|--info[^-]\{-}\(default\|hidden\)') ? 1 : 2
   let margin += stridx(opts, '--border') > stridx(opts, '--no-border') ? 2 : 0
-  let margin += stridx(opts, '--header') > stridx(opts, '--no-header')
+  if stridx(opts, '--header') > stridx(opts, '--no-header')
+    let margin += len(split(opts, "\n"))
+  endif
   return srcsz >= 0 ? min([srcsz + margin, size]) : size
 endfunction
 
@@ -662,6 +664,9 @@ function! s:split(dict)
   try
     if s:present(a:dict, 'window')
       if type(a:dict.window) == type({})
+        if !has('nvim') && !has('patch-8.2.191')
+          throw 'Vim 8.2.191 or later is required for pop-up window'
+        end
         call s:popup(a:dict.window)
       else
         execute 'keepalt' a:dict.window

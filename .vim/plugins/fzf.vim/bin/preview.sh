@@ -17,14 +17,20 @@ if [[ $1 =~ ^[A-Z]:\\ ]]; then
   CENTER=${INPUT[2]}
 fi
 
-FILE="${FILE/#\~\//$HOME\/}"
+if [[ -n "$CENTER" && ! "$CENTER" =~ ^[0-9] ]]; then
+  exit 1
+fi
+CENTER=${CENTER/[^0-9]*/}
+
+FILE="${FILE/#\~\//$HOME/}"
 if [ ! -r "$FILE" ]; then
   echo "File not found ${FILE}"
   exit 1
 fi
 
-if [[ "$(file --dereference --mime "$FILE")" =~ binary ]]; then
-  echo "$1 is a binary file"
+MIME=$(file --dereference --mime "$FILE")
+if [[ "$MIME" =~ binary ]]; then
+  echo "$MIME"
   exit 0
 fi
 
