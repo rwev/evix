@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+export YOUTUBE_DL_AUDIO_OPTS="--extract-audio --audio-format mp3 --audio-quality 1 --max-filesize 10m"
+
+function youtube-dl-audio-playlist-with-title() {
+
+        export TITLE=$1 
+        export PLAYLIST_URL=$2
+
+        set -o xtrace
+        
+        youtube-dl ${PLAYLIST_URL} \
+                -o "~/Audio/%(playlist_title)s/${TITLE}/%(title)s - %(upload_date)s.%(ext)s" \
+                --match-title ${TITLE} \
+                $(echo ${YOUTUBE_DL_AUDIO_OPTS})
+}

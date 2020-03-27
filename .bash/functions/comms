@@ -10,23 +10,16 @@ function washmutt() {
 }
 
 function protonmutt() {
-        
+
         if ! [ $# -ge 3 ]; then
                 {
-                        echo "USAGE: protonmutt <PROTONMAIL_USERNAME> <MUTT_REALNAME> <MUTT_FROM>
-                        <PROTONMAIL_PASSWORD>"
+                        echo "USAGE: protonmutt <PROTONMAIL_USERNAME> <MUTT_REALNAME> <MUTT_FROM>"
                         return
                 }
         fi
 
-        pass=$4
-        if ! [ -n "$4" ]; then
-                {
-                echo -n "Password:"
-                read -s pass
-                }
-        fi
-
+        echo -n "ProtonMail Password:"
+        read -s pass
 
         set -o xtrace
 
