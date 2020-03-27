@@ -14,7 +14,7 @@ scrolling:
 tabspaces: 8
 font:
   normal:
-    family: FuraCode Nerd Font Mono Regular 
+    family: FuraCode Nerd Font Mono 
   size: 16
   offset:
     x: 0
