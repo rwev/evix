@@ -44,7 +44,7 @@ alias grepnums='grep --line-number --color=auto'
 alias lbs='hledger-ui -f ~/.ledger/bus'
 alias l4x='hledger-ui -f ~/.ledger/4x4'
 alias lmo='hledger-ui -f ~/.ledger/moto'
-alias lp='hledger-ui -f ~/.ledger/personal'
+alias lode='hledger-ui -f ~/.ledger/lode'
 
 alias diff='diff -u'
 alias cp='cp -v'
