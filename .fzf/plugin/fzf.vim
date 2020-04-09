@@ -116,7 +116,7 @@ function! s:fzf_tempname()
 endfunction
 
 let s:default_layout = { 'down': '~40%' }
-let s:layout_keys = ['window', 'up', 'down', 'left', 'right']
+let s:layout_keys = ['window', 'tmux', 'up', 'down', 'left', 'right']
 let s:fzf_go = s:base_dir.'/bin/fzf'
 let s:fzf_tmux = s:base_dir.'/bin/fzf-tmux'
 
@@ -189,21 +189,6 @@ endfunction
 function! s:escape(path)
   let path = fnameescape(a:path)
   return s:is_win ? escape(path, '$') : path
-endfunction
-
-" Upgrade legacy options
-function! s:upgrade(dict)
-  let copy = copy(a:dict)
-  if has_key(copy, 'tmux')
-    let copy.down = remove(copy, 'tmux')
-  endif
-  if has_key(copy, 'tmux_height')
-    let copy.down = remove(copy, 'tmux_height')
-  endif
-  if has_key(copy, 'tmux_width')
-    let copy.right = remove(copy, 'tmux_width')
-  endif
-  return copy
 endfunction
 
 function! s:error(msg)
@@ -384,7 +369,7 @@ function! fzf#run(...) abort
 try
   let [shell, shellslash, shellcmdflag, shellxquote] = s:use_sh()
 
-  let dict   = exists('a:1') ? s:upgrade(a:1) : {}
+  let dict   = exists('a:1') ? copy(a:1) : {}
   let temps  = { 'result': s:fzf_tempname() }
   let optstr = s:evaluate_opts(get(dict, 'options', ''))
   try
@@ -416,7 +401,7 @@ try
     let prefix = ''
   endif
 
-  let prefer_tmux = get(g:, 'fzf_prefer_tmux', 0)
+  let prefer_tmux = get(g:, 'fzf_prefer_tmux', 0) || has_key(dict, 'tmux')
   let use_height = has_key(dict, 'down') && !has('gui_running') &&
         \ !(has('nvim') || s:is_win || has('win32unix') || s:present(dict, 'up', 'left', 'right', 'window')) &&
         \ executable('tput') && filereadable('/dev/tty')
@@ -424,7 +409,7 @@ try
   let has_nvim_term = has('nvim-0.2.1') || has('nvim') && !s:is_win
   let use_term = has_nvim_term ||
     \ has_vim8_term && !has('win32unix') && (has('gui_running') || s:is_win || !use_height && s:present(dict, 'down', 'up', 'left', 'right', 'window'))
-  let use_tmux = (!use_height && !use_term || prefer_tmux) && !has('win32unix') && s:tmux_enabled() && s:splittable(dict)
+  let use_tmux = (has_key(dict, 'tmux') || (!use_height && !use_term || prefer_tmux) && !has('win32unix') && s:splittable(dict)) && s:tmux_enabled()
   if prefer_tmux && use_tmux
     let use_height = 0
     let use_term = 0
@@ -460,19 +445,21 @@ function! s:present(dict, ...)
 endfunction
 
 function! s:fzf_tmux(dict)
-  let size = ''
-  for o in ['up', 'down', 'left', 'right']
-    if s:present(a:dict, o)
-      let spec = a:dict[o]
-      if (o == 'up' || o == 'down') && spec[0] == '~'
-        let size = '-'.o[0].s:calc_size(&lines, spec, a:dict)
-      else
-        " Legacy boolean option
-        let size = '-'.o[0].(spec == 1 ? '' : substitute(spec, '^\~', '', ''))
+  let size = get(a:dict, 'tmux', '')
+  if empty(size)
+    for o in ['up', 'down', 'left', 'right']
+      if s:present(a:dict, o)
+        let spec = a:dict[o]
+        if (o == 'up' || o == 'down') && spec[0] == '~'
+          let size = '-'.o[0].s:calc_size(&lines, spec, a:dict)
+        else
+          " Legacy boolean option
+          let size = '-'.o[0].(spec == 1 ? '' : substitute(spec, '^\~', '', ''))
+        endif
+        break
       endif
-      break
-    endif
-  endfor
+    endfor
+  endif
   return printf('LINES=%d COLUMNS=%d %s %s %s --',
     \ &lines, &columns, fzf#shellescape(s:fzf_tmux), size, (has_key(a:dict, 'source') ? '' : '-'))
 endfunction
@@ -651,7 +638,7 @@ function! s:calc_size(max, val, dict)
 endfunction
 
 function! s:getpos()
-  return {'tab': tabpagenr(), 'win': winnr(), 'cnt': winnr('$'), 'tcnt': tabpagenr('$')}
+  return {'tab': tabpagenr(), 'win': winnr(), 'winid': win_getid(), 'cnt': winnr('$'), 'tcnt': tabpagenr('$')}
 endfunction
 
 function! s:split(dict)
@@ -727,8 +714,8 @@ function! s:execute_term(dict, command, temps) abort
         " there's no other listed buffer (nvim +'set nobuflisted')
         close
       endif
-      execute 'tabnext' self.ppos.tab
-      execute self.ppos.win.'wincmd w'
+      silent! execute 'tabnext' self.ppos.tab
+      silent! execute self.ppos.win.'wincmd w'
     endif
 
     if bufexists(self.buf)
@@ -837,7 +824,7 @@ if has('nvim')
 else
   function! s:create_popup(hl, opts) abort
     let is_frame = has_key(a:opts, 'border')
-    let buf = is_frame ? '' : term_start(&shell, #{hidden: 1})
+    let buf = is_frame ? '' : term_start(&shell, #{hidden: 1, term_finish: 'close'})
     let id = popup_create(buf, #{
       \ line: a:opts.row,
       \ col: a:opts.col,
@@ -851,7 +838,7 @@ else
       call setbufline(winbufnr(id), 1, a:opts.border)
       execute 'autocmd BufWipeout * ++once call popup_close('..id..')'
     else
-      execute 'autocmd BufWipeout * ++once bwipeout! '..buf
+      execute 'autocmd BufWipeout * ++once call term_sendkeys('..buf..', "exit\<CR>")'
     endif
     return winbufnr(id)
   endfunction
