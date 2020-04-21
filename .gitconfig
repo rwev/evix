@@ -2,9 +2,10 @@
 	preloadindex = true
 	editor = vim
 	autocrlf = input
-[user]
-	name = "rwev"
-	email = "rwev@rwev.dev"
+[includeIf "gitdir:~/"]
+        path = ~/.gitconfig.personal
+[includeIf "gitdir:~/IdeaProjects/"]
+        path = ~/.gitconfig.work
 [push]
 	default = simple
 [help]
@@ -21,10 +22,10 @@
 	interactive = auto
 	pager = true
 	status = auto
-[log]
-	date = local
-[init]
-	templatedir = ~/.git-templates
+ [log]
+ 	date = local
+#[init]
+#	templatedir = ~/.git-templates
 [status]
 	submodulesummary = true
 [pull]
