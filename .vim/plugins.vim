@@ -56,13 +56,7 @@ augroup pencil
 augroup END
 
 Plug 'tommcdo/vim-exchange'
-
 Plug 'junegunn/limelight.vim'
-
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-notes'
-let g:notes_directories=[expand('~/.notes')]
-" let g:notes_suffix='.md'
 
 """ CODE """
 
@@ -126,6 +120,6 @@ Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Valloric/MatchTagAlways'
 
-Plug 'gorodinskiy/vim-coloresque'
+" Plug 'gorodinskiy/vim-coloresque'
 
 call plug#end()

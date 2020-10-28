@@ -20,7 +20,7 @@ alias vcal='vim -c "Calendar"' # -c "Goyo"'
 alias vnote='vim -c "Note" -c "Goyo"'
 
 alias gita='git add .'
-alias gitc='git commit -a -m'
+alias gitc='gita && git commit -a -m'
 alias gitcp='git cherry-pick'
 alias gits='git status'
 alias gitpl='git pull'
@@ -35,6 +35,8 @@ alias gitconf='$EDITOR ./.git/config'
 alias gitdat='git --git-dir=.git.dat'
 alias gitgconf="$EDITOR ${HOME}/.gitconfig"
 alias gitgcreds="$EDITOR ${HOME}/.git-credentials"
+
+alias gitplall="for d in ./*/ ; do (cd \"$d\" && git pull); done"
 
 alias ranger="ranger --confdir=${HOME}/.ranger"
 

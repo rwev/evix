@@ -14,7 +14,6 @@
 	last = cat-file commit HEAD
 	commitv = commit -v
 	dmerge = merge --no-ff
-	up = pull --rebase=preserve --autostash --all
 	unstage = reset HEAD --
 [color]
 	branch = auto
@@ -29,7 +28,6 @@
 [status]
 	submodulesummary = true
 [pull]
-	rebase = preserve
 [rerere]
 	enabled = true
 	autoupdate = true
