@@ -4,7 +4,7 @@
 	autocrlf = input
 [includeIf "gitdir:~/"]
         path = ~/.gitconfig.personal
-[includeIf "gitdir:~/IdeaProjects/"]
+[includeIf "gitdir:~/projects/"]
         path = ~/.gitconfig.work
 [push]
 	default = simple
@@ -33,3 +33,6 @@
 	autoupdate = true
 [credential]
 	helper = store
+[user]
+	email = rwev@rwev.dev
+	name = rwev
