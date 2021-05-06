@@ -1,0 +1,147 @@
+{
+  "main": {
+    "id": "293f273e1113ecaa",
+    "type": "split",
+    "children": [
+      {
+        "id": "1c2ad72ff5867345",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "2021-05-06.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "083e8557715fd393",
+    "type": "split",
+    "children": [
+      {
+        "id": "f65e6a2a6bf861b4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8f107fb752d290d9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "a51053e91277da32",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "figma",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bcc5b8fbd11d393c",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 176.5
+  },
+  "right": {
+    "id": "3a73acdd69056b84",
+    "type": "split",
+    "children": [
+      {
+        "id": "1322069e071baf15",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "00fc792f3bc572ff",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2021-05-06.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1d1dc5d7e86fec08",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "cb39477a0477e2c4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2021-05-06.md"
+              }
+            }
+          },
+          {
+            "id": "67f083089b1ff925",
+            "type": "leaf",
+            "state": {
+              "type": "online.larslockefeer.obsidian-plugin-todo",
+              "state": {}
+            }
+          },
+          {
+            "id": "ac9fcadf62d73506",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "1c2ad72ff5867345",
+  "lastOpenFiles": [
+    "2021-05-06.md",
+    "2021-05-05.md",
+    "2021-05-04.md",
+    "2021-05-03.md",
+    "2021-04-19.md",
+    "2021-04-20.md",
+    "2021-04-26.md",
+    "2021-04-28.md",
+    "cinq.md",
+    "galaga.md"
+  ]
+}
