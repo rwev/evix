@@ -1,0 +1,144 @@
+{
+  "main": {
+    "id": "88db245f1d5afd34",
+    "type": "split",
+    "children": [
+      {
+        "id": "d4efc4cc94cc984b",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "pdf",
+          "state": {
+            "file": "build/permit/boise-county-residential-builders-handbook.pdf"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "15014e9fe6d4a880",
+    "type": "split",
+    "children": [
+      {
+        "id": "b3b9f1c197ebe388",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "38f0202122bcc718",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "39eed139ac641ef7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "epis",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9cdb4a49c2f6c55f",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 344.5
+  },
+  "right": {
+    "id": "a0c4ce01c290ae31",
+    "type": "split",
+    "children": [
+      {
+        "id": "221ee088c0381476",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "93a2fc0914eccf41",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "build/permit/boise-county-residential-builders-handbook.pdf",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "8c3fc04ce0f0451e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "dc11d15fd2591543",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "build/permit/boise-county-residential-builders-handbook.pdf"
+              }
+            }
+          },
+          {
+            "id": "37920e1159535888",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "3999f266eb0e04b8",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "lastOpenFiles": [
+    "build/permit/boise-county-residential-builders-handbook.pdf",
+    "build/permit/boise-county-snow-load.pdf",
+    "stick rudder.md",
+    "TODO.md",
+    "Who.md",
+    "Every Good Endeavor - Timothy Keller.md",
+    "build/permit/boise-county-building-code-adoption.pdf",
+    "build/TODO.md",
+    "build/docs/Everett- 10 Sperry - RE-24 Vacant Land Real Estate.pdf",
+    "Untitled 1.md"
+  ]
+}

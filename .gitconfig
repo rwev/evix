@@ -33,6 +33,4 @@
 	autoupdate = true
 [credential]
 	helper = store
-[user]
-	email = rwev@rwev.dev
-	name = rwev
+

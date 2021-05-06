@@ -1,0 +1,473 @@
+{
+  // ### autoimport
+  "autoimport.useSemiColon": false,
+
+  // ### bracket-pair-colorizer-2
+  "bracket-pair-colorizer-2.showBracketsInGutter": true,
+  "bracket-pair-colorizer-2.showBracketsInRuler": true,
+  "bracket-pair-colorizer-2.highlightActiveScope": true,
+  "bracket-pair-colorizer-2.colors": ["Gold", "LightSkyBlue", "Orchid"],
+  "editor.matchBrackets": "never",
+
+  // ### better comments
+  "better-comments.highlightPlainText": true,
+  // ~~ For the following option: "better-comments.tags"
+  // ~~ It is case-insensitive
+  // ~~ If there are collisions in the following config, it follows "First Wins"
+  // prettier-ignore
+  "better-comments.tags": [
+    { "tag": "<SUCCESS>", "color": "#f9f8f7", "backgroundColor": "#3dae2b60" }, // <SUCCESS>
+    // { "tag": "+ //",      "color": "#f9f8f7", "backgroundColor": "#3dae2b60" }, // + //
+    // { "tag": "+//",       "color": "#f9f8f7", "backgroundColor": "#3dae2b60" }, //+//
+    { "tag": "/+///",     "color": "#f9f8f7", "backgroundColor": "#3dae2b60" }, ///+///
+    { "tag": "[+]//",     "color": "#f9f8f7", "backgroundColor": "#3dae2b60" }, //[+]//
+    { "tag": "|+|//",     "color": "#f9f8f7", "backgroundColor": "#3dae2b60" }, //|+|//
+
+    { "tag": "<DANGER>", "color": "#f9f8f7", "backgroundColor": "#be1e2d60" }, // <DANGER>
+    // { "tag": "! //",     "color": "#f9f8f7", "backgroundColor": "#be1e2d60" }, // ! //
+    // { "tag": "!//",      "color": "#f9f8f7", "backgroundColor": "#be1e2d60" }, //!//
+    { "tag": "/!///",    "color": "#f9f8f7", "backgroundColor": "#be1e2d60" }, ///!///
+    { "tag": "[!]//",    "color": "#f9f8f7", "backgroundColor": "#be1e2d60" }, //[!]//
+    { "tag": "|!|//",    "color": "#f9f8f7", "backgroundColor": "#be1e2d60" }, //|!|//
+    
+    { "tag": "<WARN>",  "color": "#f9f8f7", "backgroundColor": "#ffc23060" }, // <WARN>
+    // { "tag": "# //",    "color": "#f9f8f7", "backgroundColor": "#ffc23060" }, // # //
+    // { "tag": "#//",     "color": "#f9f8f7", "backgroundColor": "#ffc23060" }, //#//
+    { "tag": "/#///",   "color": "#f9f8f7", "backgroundColor": "#ffc23060" }, ///#///
+    { "tag": "[#]//",   "color": "#f9f8f7", "backgroundColor": "#ffc23060" }, //[#]//
+    { "tag": "|#|//",   "color": "#f9f8f7", "backgroundColor": "#ffc23060" }, //|#|//
+    
+    { "tag": "<INFO>",  "color": "#f9f8f7", "backgroundColor": "#55a8dd60" }, // <INFO>
+    // { "tag": "@ //",    "color": "#f9f8f7", "backgroundColor": "#55a8dd60" }, // @ //
+    // { "tag": "@//",     "color": "#f9f8f7", "backgroundColor": "#55a8dd60" }, //@//
+    { "tag": "/@///",   "color": "#f9f8f7", "backgroundColor": "#55a8dd60" }, ///@///
+    { "tag": "[@]//",   "color": "#f9f8f7", "backgroundColor": "#55a8dd60" }, //[@]//
+    { "tag": "|@|//",   "color": "#f9f8f7", "backgroundColor": "#55a8dd60" }, //|@|//
+
+
+    { "tag": "!default;", "color": "#569cd6",  "strikethrough": true }, // !default;
+    { "tag": "//", "color": "#2f3640", "strikethrough": true }, // // Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    
+    { "tag": "!!!!!", "color": "#f9f8f7", "backgroundColor": "#be1e2d78", "bold": true, "underline": true }, // !!!!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "#####", "color": "#f9f8f7", "backgroundColor": "#ffc23078", "bold": true, "underline": true }, // ##### Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "~~~~~", "color": "#f9f8f7", "backgroundColor": "#0096aa78", "bold": true, "underline": true }, // ~~~~~ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "%%%%%", "color": "#f9f8f7", "backgroundColor": "#55a8dd78", "bold": true, "underline": true }, // %%%%% Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "+++++", "color": "#f9f8f7", "backgroundColor": "#3dae2b78", "bold": true, "underline": true }, // +++++ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "-----", "color": "#f9f8f7", "backgroundColor": "#ef413678", "bold": true, "underline": true }, // ----- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "&&&&&", "color": "#f9f8f7", "backgroundColor": "#f7986278", "bold": true, "underline": true }, // &&&&& Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": ":::::", "color": "#f9f8f7", "backgroundColor": "#2f4d7a78", "bold": true, "underline": true }, // ::::: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "|||||", "color": "#f9f8f7", "backgroundColor": "#2f3640e0", "bold": true, "underline": true }, // ||||| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "=====", "color": "#f9f8f7", "backgroundColor": "#f9f8f730", "bold": true, "underline": true }, // ===== Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    
+    { "tag": "!!!!", "color": "#f9f8f7d0", "backgroundColor": "#be1e2d60" }, // !!!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "####", "color": "#f9f8f7d0", "backgroundColor": "#ffc23060" }, // #### Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "~~~~", "color": "#f9f8f7d0", "backgroundColor": "#0096aa60" }, // ~~~~ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "%%%%", "color": "#f9f8f7d0", "backgroundColor": "#55a8dd60" }, // %%%% Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "++++", "color": "#f9f8f7d0", "backgroundColor": "#3dae2b60" }, // ++++ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "----", "color": "#f9f8f7d0", "backgroundColor": "#ef413660" }, // ---- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "&&&&", "color": "#f9f8f7d0", "backgroundColor": "#f7986260" }, // &&&& Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "::::", "color": "#f9f8f7d0", "backgroundColor": "#2f4d7a60" }, // :::: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "||||", "color": "#f9f8f7d0", "backgroundColor": "#2f3640e0" }, // |||| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "====", "color": "#f9f8f7",   "backgroundColor": "#f9f8f730" }, // ==== Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    
+    { "tag": "!!!", "color": "#be1e2d", "backgroundColor": "#be1e2d30" }, // !!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "###", "color": "#ffc230", "backgroundColor": "#ffc23030" }, // ### Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "~~~", "color": "#0096aa", "backgroundColor": "#0096aa30" }, // ~~~ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "%%%", "color": "#55a8dd", "backgroundColor": "#55a8dd30" }, // %%% Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "+++", "color": "#3dae2b", "backgroundColor": "#3dae2b30" }, // +++ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "---", "color": "#ef4136", "backgroundColor": "#ef413630" }, // --- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "&&&", "color": "#f79862", "backgroundColor": "#f7986230" }, // &&& Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": ":::", "color": "#2f4d7a", "backgroundColor": "#2f4d7a30" }, // ::: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "|||", "color": "#6e7279", "backgroundColor": "#2f364050" }, // ||| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "===", "color": "#f9f8f7", "backgroundColor": "#f9f8f718" }, // === Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+
+    { "tag": "!!", "color": "#be1e2d", "backgroundColor": "#2f364038" }, // !! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "##", "color": "#ffc230", "backgroundColor": "#2f364038" }, // ## Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "~~", "color": "#0096aa", "backgroundColor": "#2f364038" }, // ~~ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "%%", "color": "#55a8dd", "backgroundColor": "#2f364038" }, // %% Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "++", "color": "#3dae2b", "backgroundColor": "#2f364038" }, // ++ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "--", "color": "#ef4136", "backgroundColor": "#2f364038" }, // -- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "&&", "color": "#f79862", "backgroundColor": "#2f364038" }, // && Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "::", "color": "#2f4d7a", "backgroundColor": "#2f364038" }, // :: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "||", "color": "#595e66", "backgroundColor": "#2f364038" }, // || Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "==", "color": "#f9f8f7", "backgroundColor": "#2f364038" }, // == Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+
+
+    { "tag": "<cloud>",    "color": "#f9f8f7", "backgroundColor": "#f9f8f720" }, // <cloud>     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "<green>",    "color": "#3dae2b", "backgroundColor": "#3dae2b20" }, // <green>     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "<melon>",    "color": "#f79862", "backgroundColor": "#f7986220" }, // <melon>     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "<midnight>", "color": "#2f3640", "backgroundColor": "#2f364020" }, // <midnight>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "<mist>",     "color": "#c1b8b3", "backgroundColor": "#c1b8b320" }, // <mist>      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "<purple>",   "color": "#623d66", "backgroundColor": "#623d6620" }, // <purple>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "<red>",      "color": "#be1e2d", "backgroundColor": "#be1e2d20" }, // <red>       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "<ruby>",     "color": "#ef4136", "backgroundColor": "#ef413620" }, // <ruby>      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "<sage>",     "color": "#9cb53c", "backgroundColor": "#9cb53c20" }, // <sage>      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "<sky>",      "color": "#55a8dd", "backgroundColor": "#55a8dd20" }, // <sky>       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "<stone>",    "color": "#75706e", "backgroundColor": "#75706e20" }, // <stone>     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+    { "tag": "<yellow>",   "color": "#ffc230", "backgroundColor": "#ffc23020" }, // <yellow>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+  ],
+
+  // ### csharp - c# - .NET
+  "csharp.semanticHighlighting.enabled": true,
+  "csharp.suppressDotnetInstallWarning": true,
+  "csharp.suppressDotnetRestoreNotification": true,
+  "csharp.suppressProjectJsonWarning": true,
+  "csharp.supressBuildAssetsNotification": true,
+  "omnisharp.enableEditorConfigSupport": true,
+
+  // ### cSpell config - user dictionary
+  "cSpell.spellCheckDelayMs": 250,
+  // prettier-ignore
+  "cSpell.ignoreWords": [
+    "Milli",
+    "Millis",
+    "Multiselect",
+    "XSRF",
+    "accum",
+    "adipiscing",
+    "aliqua",
+    "allow",
+    "allow empty rulesets",
+    "amet",
+    "angular",
+    "angular devkit build ng packagr",
+    "aptrinsic",
+    "arglist",
+    "aria",
+    "aria describedby",
+    "authz",
+    "autofilled",
+    "autogenerated",
+    "build",
+    "butcon",
+    "cacheable",
+    "cdk",
+    "cdk scrollable module",
+    "checkbox's",
+    "checkmark",
+    "cinq",
+    "classlist",
+    "clearfix",
+    "codegen",
+    "codelyzer",
+    "comenzo",
+    "concat",
+    "conigs",
+    "consectetur",
+    "csrf",
+    "curr",
+    "datepicker",
+    "datetime",
+    "dedupe",
+    "delay",
+    "demoer",
+    "desaturate",
+    "describedby",
+    "deserializes",
+    "destroy",
+    "devkit",
+    "dolore",
+    "draggable",
+    "eiusmod",
+    "elit",
+    "empty",
+    "envconfig",
+    "envdot",
+    "envsub",
+    "envsubh",
+    "eofline",
+    "esnext",
+    "esper",
+    "espers",
+    "filesaver",
+    "flexbox",
+    "flyout",
+    "gainsight",
+    "galaga",
+    "hashbang",
+    "highlightjs",
+    "hljs",
+    "incididunt",
+    "init",
+    "init accum",
+    "interactable",
+    "intg",
+    "iteratees",
+    "jasminewd",
+    "js",
+    "keepalive",
+    "keycodes",
+    "keyvalue",
+    "kone",
+    "kount",
+    "kount's",
+    "labore",
+    "laravel",
+    "launchdarkly",
+    "ldclient",
+    "ldclient js",
+    "libphonenumber",
+    "listitem",
+    "lodash",
+    "lodash's",
+    "longpress",
+    "longpress delay",
+    "luxon",
+    "macbook",
+    "maxlength",
+    "microtask",
+    "minlength",
+    "mixedmark",
+    "mixins",
+    "module",
+    "nbsp",
+    "negativify",
+    "ng",
+    "ngneat",
+    "ngneat until destroy",
+    "noopable",
+    "nospace",
+    "novalidate",
+    "oidc",
+    "okta's",
+    "on",
+    "on microtask empty",
+    "onespace",
+    "openid",
+    "overridable",
+    "packagr",
+    "paginator",
+    "paren",
+    "persistable",
+    "persistable types",
+    "pkce",
+    "plusplus",
+    "prefixer",
+    "progressbar",
+    "proto",
+    "quotemark",
+    "reinit",
+    "rerender",
+    "ruleset",
+    "rulesets",
+    "s",
+    "scrollable",
+    "scrollbar",
+    "semibold",
+    "shinies",
+    "sidenav",
+    "signin",
+    "skip",
+    "sortability",
+    "startcase",
+    "strikethrough",
+    "stylelint",
+    "svgs",
+    "tabindex",
+    "tabset",
+    "template",
+    "tempor",
+    "testdouble",
+    "testid",
+    "textareas",
+    "textbox",
+    "timepicker",
+    "titlecase",
+    "treeselect",
+    "tslib",
+    "typeahead",
+    "typedoc",
+    "types",
+    "types jasminewd",
+    "unarchive",
+    "unhandledrejection",
+    "unpatched",
+    "until",
+    "userinfo",
+    "utilites",
+    "vnode",
+    "vuex",
+    "xbold",
+    "xsmall",
+    "xxbold"
+  ],
+
+ 
+  // ### console
+  "debug.console.fontSize": 15,
+
+  // ### diff
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.renderSideBySide": true,
+
+  // ### editor
+  "editor.codeActionsOnSave": { "source.fixAll": true, "source.fixAll.sortJSON": false },
+  "editor.find.addExtraSpaceOnTop": false,
+  "editor.fontFamily": "Roboto Mono for Powerline, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 15,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
+  "editor.linkedEditing": true,
+  "editor.renderLineHighlight": "all",
+  "editor.renderLineHighlightOnlyWhenFocus": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.scrollBeyondLastLine": false,
+  "editor.tabSize": 2,
+  // "editor.wordWrap": "on",
+  // "editor.wordWrapColumn": 140,
+
+  // ### editor.defaultFormatter
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[scss]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[vue]": { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
+  "[yaml]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  // "[csharp]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  // "[javascript]": { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
+  // "[php]": { "editor.defaultFormatter": "kokororin.vscode-phpfmt" },
+
+  // ### emmet
+  "emmet.showSuggestionsAsSnippets": true,
+  // "editor.snippetSuggestions": "top"
+
+  // ### eslint
+  "eslint.alwaysShowStatus": true,
+  "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.format.enable": false,
+  "eslint.run": "onSave",
+  // "eslint.probe": ["javascript", "typescript", "vue"],
+  // "eslint.validate": ["javascript", "typescript", "vue"],
+
+  // ### exporler
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+
+  // ### extensions
+  "extensions.ignoreRecommendations": false,
+
+  // ### indent rainbow
+  // prettier-ignore
+  "indentRainbow.colors": ["rgba(255, 215, 0,0.07)", "rgba(135, 206, 250,0.07)", "rgba(218, 112, 214,0.07)"],
+  "indentRainbow.updateDelay": 500,
+
+  // ### files specific
+  // prettier-ignore
+  "files.associations": { ".env": "properties", ".aliases": "properties", ".env.docker-local": "properties" },
+  "files.autoGuessEncoding": true,
+  // prettier-ignore
+  "files.exclude": { 
+    "files.trimFinalNewlines": true, 
+    "files.trimTrailingWhitespace": true, 
+    "**/*.code-search": true, 
+    "**/*.psd": true, 
+    "**/.cache": true, 
+    "**/.next": true, 
+    "**/.vs": true, 
+    "**/bin": true, 
+    "**/bower_components": true, 
+    "**/dist": true, 
+    "**/node_modules": true, 
+    "**/obj": true, 
+    // "**/public": true, 
+    "**/vendor": true 
+  },
+  // "files.autoSave": "onFocusChange",
+  // "files.autoSaveDelay": 500,
+
+  // ### git
+  "git.autofetch": true,
+  "git.autoRepositoryDetection": "openEditors",
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+
+  // ### git lens
+  "gitlens.blame.ignoreWhitespace": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "js/ts.implicitProjectConfig.strictNullChecks": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // ### peacock
+  "peacock.darkenLightenPercentage": 1,
+  // prettier-ignore
+  "peacock.elementAdjustments": { "statusBar": "lighten", "titleBar": "lighten" },
+  "peacock.surpriseMeOnStartup": true,
+
+  // ### prettier
+  "prettier.arrowParens": "always",
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "prettier.jsxBracketSameLine": true,
+  "prettier.printWidth": 160,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.useEditorConfig": false,
+
+  // ### scm
+  "scm.defaultViewMode": "tree",
+
+  // ### search
+  // prettier-ignore
+  "search.exclude": { "**/*.code-search": false, "**/bower_components": false, "**/node_modules": false, "**/dist": false },
+  "search.followSymlinks": false,
+  "search.showLineNumbers": true,
+
+  // ### sync
+  "sync.autoDownload": true,
+  "sync.autoUpload": true,
+  "sync.gist": "fcf88f8b7adda623bf18555e1fc539e1",
+  "sync.quietSync": true,
+
+  // ### terminal
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
+
+  // ### tsimporter
+  "tsimporter.emitSemicolon": false,
+
+  // ### vsicons
+  "vsicons.dontShowNewVersionMessage": true,
+
+  // ### workbench
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.editor.limit.value": 7,
+  "workbench.editor.showTabs": true,
+  "workbench.iconTheme": "vscode-great-icons",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.renderIndentGuides": "always",
+  "typescriptHero.imports.insertSemicolons": false,
+  "typescriptHero.imports.multiLineWrapThreshold": 140,
+  "typescript.referencesCodeLens.enabled": false,
+  "javascript.preferences.useAliasesForRenames": false,
+  "javascript.suggestionActions.enabled": false,
+  "typescript.preferences.useAliasesForRenames": false,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "tsimporter.filesToExclude": ["./build/**", "./dist/**", "./coverage/**"],
+  "typescript.suggest.paths": false,
+  "javascript.suggest.paths": false,
+  "angular.experimental-ivy": true,
+  "css.lint.duplicateProperties": "warning",
+  "css.lint.float": "warning",
+  "scss.lint.duplicateProperties": "warning",
+  "scss.lint.float": "warning",
+  "scss.lint.idSelector": "warning",
+  "scss.lint.ieHack": "warning",
+  "scss.lint.important": "warning",
+  "scss.lint.universalSelector": "warning",
+  "css.lint.idSelector": "warning",
+  "css.lint.ieHack": "warning",
+  "css.lint.important": "warning",
+  "css.lint.universalSelector": "warning",
+  "window.zoomLevel": 1
+
+  // ### yaml
+  // "yaml.format.printWidth": 140
+}
