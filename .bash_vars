@@ -14,3 +14,6 @@ export HISTSIZE=1000
 export HISTFILESIZE=2000
 
 export HISTFILE=~/.bash_history
+
+export RANGER_LOAD_DEFAULT_RC=FALSE
+export HIGHLIGHT_STYLE=clarity 

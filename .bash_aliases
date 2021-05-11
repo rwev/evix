@@ -20,7 +20,7 @@ alias vcal='vim -c "Calendar"' # -c "Goyo"'
 alias vnote='vim -c "Note" -c "Goyo"'
 
 alias gita='git add .'
-alias gitc='gita && git commit -a -m'
+alias gitc='git commit -a -m'
 alias gitcp='git cherry-pick'
 alias gits='git status'
 alias gitpl='git pull'
