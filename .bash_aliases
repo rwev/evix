@@ -21,6 +21,7 @@ alias vnote='vim -c "Note" -c "Goyo"'
 
 alias gita='git add .'
 alias gitc='git commit -a -m'
+alias gitup="gitc $(date +%d.%m.%y-%H:%M:%S)"
 alias gitcp='git cherry-pick'
 alias gits='git status'
 alias gitpl='git pull'
@@ -39,14 +40,10 @@ alias gitgcreds="$EDITOR ${HOME}/.git-credentials"
 alias gitplall="for d in ./*/ ; do (cd \"$d\" && git pull); done"
 
 alias ranger="ranger --confdir=${HOME}/.ranger"
+alias r="ranger"
 
 alias grepnocom="grep -v '^$\|^\s*\#'"
 alias grepnums='grep --line-number --color=auto'
-
-alias lbs='hledger-ui -f ~/.ledger/bus'
-alias l4x='hledger-ui -f ~/.ledger/4x4'
-alias lmo='hledger-ui -f ~/.ledger/moto'
-alias lode='hledger-ui -f ~/.ledger/lode'
 
 alias diff='diff -u'
 alias cp='cp -v'

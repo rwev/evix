@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "db5463eef032a331",
+        "id": "497822fc3477ef85",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "2021-05-11.md",
+            "file": "2021-05-25.md",
             "mode": "source"
           }
         }
@@ -39,8 +39,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "optional",
-                "matchingCase": false,
+                "query": "tag:#C2D8ED",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -60,7 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 176.5
+    "width": 181.5
   },
   "right": {
     "id": "3a73acdd69056b84",
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2021-05-11.md",
+                "file": "2021-05-25.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2021-05-11.md"
+                "file": "2021-05-25.md"
               }
             }
           },
@@ -129,19 +129,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 265.5
   },
-  "active": "db5463eef032a331",
+  "active": "497822fc3477ef85",
   "lastOpenFiles": [
-    "2021-05-11.md",
+    "2021-05-25.md",
+    "2021-05-24.md",
+    "2021-05-21.md",
+    "2021-05-20.md",
+    "2021-05-12.md",
     "2021-05-08.md",
-    "2021-05-07.md",
-    "2021-05-10.md",
-    "2021-05-06.md",
-    "2021-05-05.md",
-    "2021-04-19.md",
-    "2021-05-03.md",
-    "2021-04-27.md",
-    "2021-04-22.md"
+    "fe-rule.md",
+    "2021-05-19.md",
+    "2021-05-14.md",
+    "2021-05-17.md"
   ]
 }

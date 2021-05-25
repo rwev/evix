@@ -3,8 +3,7 @@
 # is set to True and this file exists, this script will be called and its
 # output is displayed in ranger.  ANSI color codes are supported.
 
-
-export HIGHLIGHT_STYLE=clarity
+export HIGHLIGHT_STYLE=nord
 
 # NOTES: This script is considered a configuration file.  If you upgrade
 # ranger, it will be left untouched. (You must update it yourself.)
@@ -101,13 +100,13 @@ esac
 case "$mimetype" in
     # Syntax highlight for text files:
     text/* | */xml)
-        if [ "$(tput colors)" -ge 256 ]; then
-            pygmentize_format=terminal256
-            highlight_format=xterm256
-        else
-            pygmentize_format=terminal
-            highlight_format=ansi
-        fi
+        # if [ "$(tput colors)" -ge 256 ]; then
+        #    pygmentize_format=terminal256
+        #    highlight_format=xterm256
+        #else
+        pygmentize_format=terminal
+        highlight_format=ansi
+        #fi
         try safepipe highlight --out-format=${highlight_format} "$path" && { dump | trim; exit 5; }
         try safepipe pygmentize -f ${pygmentize_format} "$path" && { dump | trim; exit 5; }
         exit 2;;
