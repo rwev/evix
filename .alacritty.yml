@@ -134,8 +134,8 @@ selection:
   save_to_clipboard: false
 mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
-shell:
-  program: zsh
+#shell:
+  #program: /bin/zsh
   #args:
   #  - --command=tmux
 debug:
