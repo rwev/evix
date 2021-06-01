@@ -55,3 +55,73 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias pfindnkill="pgrep %1 | pkill"
 alias alacritty-fullscreen-toggle="wmctrl -r 'Alacritty' -b toggle,fullscreen"
+
+alias ls='ls -hF --color=auto'
+alias grep='grep --color=always'
+alias fgrep='fgrep --color=always'
+alias egrep='egrep --color=always'
+
+alias dkcon="docker ps -aq | xargs docker rm -f"
+alias dkim="docker image ls -q | xargs docker rmi -f"
+alias dpsa="docker ps -a"
+alias dwipe="docker system prune --volumes -f"
+
+alias dcb="docker-compose build"
+alias dcd="docker-compose down"
+alias dcu="docker-compose up"
+alias dcub="docker-compose up --build"
+
+
+alias npmgi="npm -g install"
+alias npmgls="npm -g ls"
+alias npmglsd="npm -g ls --depth"
+
+alias npmid="npm install --save-dev"
+alias npmip="npm install --save"
+alias npmlo="npm install --package-lock-only"
+alias npmloci="npm install --package-lock-only && npm ci"
+alias npmrm="npm remove"
+
+alias npmdoc="npm docs"
+alias npmr="npm run"
+
+alias npma="npm audit"
+alias npmaf="npm audit fix"
+alias npmb="npm run build"
+alias npmbp="npm run build:prod"
+alias npmc="npm run clean"
+alias npmd="npm run dev"
+alias npmf="npm run format"
+alias npml="npm run lint"
+alias npmlsd="npm ls --depth"
+alias npms="npm start"
+alias npmsl="npm run start:local"
+alias npmt="npm run test"
+alias npmtw="npm run test:watch"
+alias npmtwd="npm run test:watch:debug"
+alias npmu="npm update"
+alias npmua="npm update --all"
+alias npmw="npm run watch"
+
+alias rmnm="rm -rf ./node_modules"
+alias rmnmpl="rm -rf ./node_modules ./package-lock.json"
+alias rmpl="rm ./package-lock.json"
+alias rmrf="rm -rf"
+
+# ----- timestamp aliases -----
+
+alias da='date "+%Y-%m-%d %A    %T %Z"'
+alias stamp='date "+%Y/%m/%d %a %H:%M:%S"'
+
+alias fname='find . -name $1'
+alias h='history | grep $1'
+alias hosts='sudo vim /private/etc/hosts'
+alias path='echo -e ${PATH//:/\\n}'
+alias ports="lsof -iTCP -P -sTCP:LISTEN" # Show used ports # netstat
+alias psg='ps -ef | grep $1'
+alias sfname='sudo find / -name $1'
+alias sudo='sudo ' # Replace sudo so it can be used with other aliases -----
+alias top-commands='history | awk "{print $2}" | awk "BEGIN {FS="|"} {print $1}" |sort|uniq -c | sort -rn | head -10' # Show most popular commands
+alias trash="rm -rr ~/.Trash"
+
+

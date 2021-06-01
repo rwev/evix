@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "2021-05-28.md",
+            "file": "2021-06-01.md",
             "mode": "source"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:",
+                "query": "gist",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -56,7 +56,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -76,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2021-05-28.md",
+                "file": "2021-06-01.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2021-05-28.md"
+                "file": "2021-06-01.md"
               }
             }
           },
@@ -133,15 +134,15 @@
   },
   "active": "227cc7b011461df9",
   "lastOpenFiles": [
+    "2021-06-01.md",
+    "2021-05-27.md",
+    "2021-05-11.md",
+    "2021-05-10.md",
     "2021-05-28.md",
+    "2021-05-13.md",
     "2021-05-25.md",
     "2021-05-26.md",
-    "2021-05-27.md",
     "2021-04-20.md",
-    "2021-04-19.md",
-    "2021-05-14.md",
-    "2021-05-21.md",
-    "2021-05-19.md",
-    "2021-05-20.md"
+    "2021-04-19.md"
   ]
 }
