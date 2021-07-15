@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "227cc7b011461df9",
+        "id": "8fe5eb98507872cc",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "2021-06-01.md",
+            "file": "Okta.md",
             "mode": "source"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "gist",
+                "query": "Directive",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -56,12 +56,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 181.5
+    "width": 150
   },
   "right": {
     "id": "3a73acdd69056b84",
@@ -77,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2021-06-01.md",
+                "file": "Okta.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2021-06-01.md"
+                "file": "Okta.md"
               }
             }
           },
@@ -130,19 +129,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265.5
+    "width": 320.5
   },
-  "active": "227cc7b011461df9",
+  "active": "8fe5eb98507872cc",
   "lastOpenFiles": [
+    "Okta.md",
+    "2021-06-02.md",
+    "2021-07-15.md",
     "2021-06-01.md",
-    "2021-05-27.md",
-    "2021-05-11.md",
-    "2021-05-10.md",
-    "2021-05-28.md",
-    "2021-05-13.md",
-    "2021-05-25.md",
-    "2021-05-26.md",
-    "2021-04-20.md",
-    "2021-04-19.md"
+    "2021-06-29.md",
+    "2021-06-11.md",
+    "2021-06-10.md",
+    "2021-07-14.md",
+    "Untitled.md",
+    "2021-07-12.md"
   ]
 }

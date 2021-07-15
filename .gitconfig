@@ -28,6 +28,7 @@
 [status]
 	submodulesummary = true
 [pull]
+	rebase = false
 [rerere]
 	enabled = true
 	autoupdate = true
